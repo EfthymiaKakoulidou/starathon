@@ -1,7 +1,31 @@
-#green {
-  color: rgb(34, 255, 0);
+/* Background image */
+body {
+  background: url('../images/bgstarwars.webp') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+/* Trivia main container */
+#main-container {
+  /* background-color: brown; used for testing purposes */
+  margin-top: 30vh;
   
-.red-font {
-  color: red;
+}
+
+/* Welcome Message */
+h1 {
+  font-size: 3rem !important;
+  color: rgb(254, 233, 8) !important;
+}
+
+/* Trivia start button */
+.start-button {
+  color: rgb(254, 233, 8) !important;
+}
+
+.start-button:hover {
+  background-color: rgb(254, 233, 8) !important;
+  color: black !important;
 }
