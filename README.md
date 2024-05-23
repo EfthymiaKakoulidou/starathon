@@ -26,7 +26,12 @@ The goal section provides a concise summary of the main objective or purpose of 
 - ➡️ Target Audience
 - ➡️ Benefits
 
-## Wireframes
+## Design
+### Imagery
+
+### Font
+
+### Wireframes
 Wireframes for a responsive design have been created. The homepage design is shown below. All other wireframes can be viewed [here.](wireframes)
 ![mobile phone wireframe of website](wireframes/wireframes/start-screen.png)
 
