@@ -1,8 +1,13 @@
-
 # SUBMISSION
 ## Deployment
 #### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
 The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
+
+![GitHub Issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/starathon?style=flat)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/EfthymiaKakoulidou/starathon/main?style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/EfthymiaKakoulidou/starathon?style=flat)
+![GitHub top language](https://img.shields.io/github/languages/top/EfthymiaKakoulidou/starathon?style=flat)
+![Contributors](https://img.shields.io/github/contributors/EfthymiaKakoulidou/starathon?style=flat)
 
 ## Criteria
 In this section, we will briefly discuss how our team addressed the applicable criteria:
@@ -27,11 +32,17 @@ The goal section provides a concise summary of the main objective or purpose of 
 - ➡️ Benefits
 
 ## Design
+### Colors
+The primary color palette for the app is shown below.
+
+![mobile phone wireframe of website](static/images/color-pallette.png)
+
 ### Imagery
 
 ### Font
  Font to be used for the logo is 'Star Wars' imported from cdn fonts available at [cdn fonts](https://www.cdnfonts.com). Should this fail to load the fall back font is sans serif.
  Nav font is 'SF Distant Galaxy' imported from cdn fonts available at [cdn fonts](https://www.cdnfonts.com). Should this fail to load the fall back font is sans serif.
+ Button font is 'Days One' imported from cdn fonts available at [cdn fonts](https://www.cdnfonts.com). Should this fail to load the fall back font is sans serif.
 
 ### Wireframes
 Wireframes for a responsive design have been created. The homepage design is shown below. All other wireframes can be viewed [here.](wireframes)
@@ -45,3 +56,12 @@ In the tech section, we provide information about the technology stack, dependen
 In the credits section, we provide information about the sources used
 Fonts imported from [cdn fonts](https://www.cdnfonts.com).
 Image titles created at [flaming text](https://eu1.flamingtext.com).
+
+## The Starathon Team and contributors
+
+| Member | Role |  
+|--|--|
+| [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/About page |
+| [João Rodrigues](https://github.com/Joao4569) | Quiz Button Functionality/Content |
+| [Gemma Butcher](https://github.com/GemmaButcher-dev) | Design/Content |
+| [Vernell C](https://github.com/VCGithubCode) | Frontend Navbar Logic Functionality/Styling/Content/Design |
