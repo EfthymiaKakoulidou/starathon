@@ -426,6 +426,11 @@ footer {
   background-color: black;
 }
 
+/* Timer */
+.timer {
+  margin-left: 3rem;
+}
+
 
 @media screen and (min-width: 320px) {
 
