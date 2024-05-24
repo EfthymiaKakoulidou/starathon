@@ -109,19 +109,37 @@ function generateQuestionHTML(nextItem, shuffledAnswers) {
     return html;
 }
 
+// Get the modal
+let modal = document.getElementById('answerModal');
+let modalMessage = document.getElementById('modal-message');
+
 // Attach event listeners to the possible answers
 function attachAnswerListeners(shuffledAnswers, nextItem) {
+
+    // Attach event listeners to the answers
     shuffledAnswers.forEach((answer, index) => {
+
+        // Get the answer element
         let answerElement = document.getElementById(`answer${index}`);
         answerElement.addEventListener('click', function() {
+
+            // Display the modal with the result of the answer
             if (answer === nextItem.value.correctAnswer) {
-                alert('Correct!');
+                modalMessage.textContent = 'Correct!';
             } else {
-                alert('Incorrect. The correct answer was ' + nextItem.value.correctAnswer);
+                modalMessage.textContent = 'Incorrect. The correct answer was ' + nextItem.value.correctAnswer;
             }
+            modal.style.display = "block";
         });
     });
 }
+
+// Attach event listener to the next question modal button
+let nextQuestionModalButton = document.getElementById('next-question-modal-button');
+nextQuestionModalButton.addEventListener('click', function() {
+    modal.style.display = "none";
+    displayNextQuestion();
+});
 
 // Attach event listener to the next question button
 function attachNextQuestionListener() {

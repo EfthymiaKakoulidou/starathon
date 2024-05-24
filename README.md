@@ -4,6 +4,12 @@
 #### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
 The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
 
+![GitHub Issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/starathon?style=flat)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/EfthymiaKakoulidou/starathon/main?style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/EfthymiaKakoulidou/starathon?style=flat)
+![GitHub top language](https://img.shields.io/github/languages/top/EfthymiaKakoulidou/starathon?style=flat)
+![Contributors](https://img.shields.io/github/contributors/EfthymiaKakoulidou/starathon?style=flat)
+
 ## Criteria
 In this section, we will briefly discuss how our team addressed the applicable criteria:
 
@@ -51,4 +57,4 @@ In the tech section, we provide information about the technology stack, dependen
 In the credits section, we provide information about the sources used
 Fonts imported from [cdn fonts](https://www.cdnfonts.com).
 Image titles created at [flaming text](https://eu1.flamingtext.com).
-Favicon created at [favicon.io](https://favicon.io/favicon-converter/).
+
