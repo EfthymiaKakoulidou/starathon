@@ -64,5 +64,5 @@ Image titles created at [flaming text](https://eu1.flamingtext.com).
 | [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/About page |
 | [João Rodrigues](https://github.com/Joao4569) | Quiz Button Functionality/Content |
 | [Gemma Butcher](https://github.com/GemmaButcher-dev) | Design/Content |
-| [María Ángeles](https://github.com/Zest-studi-o) | Frontend Navbar Logic Functionality/Styling/Content/Design |
+| [María Ángeles](https://github.com/Zest-studi-o) | 404 Page/Testing |
 | [Vernell C](https://github.com/VCGithubCode) | Frontend Navbar Logic Functionality/Styling/Content/Design |
