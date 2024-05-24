@@ -402,6 +402,17 @@ footer {
   color: yellow ;
 }
 
+/* 404 page */
+.baby-yoda-img {
+margin: -50% 0 0 10%;
+width: 90%;
+height: auto;
+}
+
+.error-img {
+margin: -20% 0 20% 0;
+}
+=======
 /* Answer comparison modal */
 
 .modal {
@@ -431,7 +442,7 @@ footer {
   margin-left: 3rem;
 }
 
-
+/* Media Queries */
 @media screen and (min-width: 320px) {
 
 }
