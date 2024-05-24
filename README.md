@@ -30,9 +30,12 @@ The goal section provides a concise summary of the main objective or purpose of 
 ### Imagery
 
 ### Font
+ Font to be used for the logo is 'Star Wars' imported from cdn fonts available at [cdn fonts](https://www.cdnfonts.com). Should this fail to load the fall back font is sans serif.
+ Nav font is 'SF Distant Galaxy' imported from cdn fonts available at [cdn fonts](https://www.cdnfonts.com). Should this fail to load the fall back font is sans serif.
 
 ### Wireframes
 Wireframes for a responsive design have been created. The homepage design is shown below. All other wireframes can be viewed [here.](wireframes)
+
 ![mobile phone wireframe of website](wireframes/start-screen.png)
 
 ## Tech
@@ -40,3 +43,5 @@ In the tech section, we provide information about the technology stack, dependen
 
 ## Credits
 In the credits section, we provide information about the sources used
+Fonts imported from [cdn fonts](https://www.cdnfonts.com).
+Image titles created at [flaming text](https://eu1.flamingtext.com).
