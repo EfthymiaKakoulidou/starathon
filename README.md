@@ -43,3 +43,5 @@ In the tech section, we provide information about the technology stack, dependen
 
 ## Credits
 In the credits section, we provide information about the sources used
+Fonts imported from [cdn fonts](https://www.cdnfonts.com).
+Image titles created at [flaming text](https://eu1.flamingtext.com).
