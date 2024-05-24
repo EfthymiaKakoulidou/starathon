@@ -51,3 +51,12 @@ In the tech section, we provide information about the technology stack, dependen
 In the credits section, we provide information about the sources used
 Fonts imported from [cdn fonts](https://www.cdnfonts.com).
 Image titles created at [flaming text](https://eu1.flamingtext.com).
+
+## The Starathon Team and contributions
+  
+| Member | Role |  
+|--|--|
+| [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/About page |
+| [João Rodrigues](https://github.com/Joao4569) | Quiz Button Functionality/Content |
+| [Gemma Butcher](https://github.com/GemmaButcher-dev) | Design/Content |
+| [Vernell C](https://github.com/VCGithubCode) | Frontend Navbar Logic Functionality/Styling/Content/Design |
