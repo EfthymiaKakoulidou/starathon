@@ -33,11 +33,17 @@ The goal section provides a concise summary of the main objective or purpose of 
 - ➡️ Benefits
 
 ## Design
+### Colors
+The primary color palette for the app is shown below.
+
+![mobile phone wireframe of website](static/images/color-pallette.png)
+
 ### Imagery
 
 ### Font
  Font to be used for the logo is 'Star Wars' imported from cdn fonts available at [cdn fonts](https://www.cdnfonts.com). Should this fail to load the fall back font is sans serif.
  Nav font is 'SF Distant Galaxy' imported from cdn fonts available at [cdn fonts](https://www.cdnfonts.com). Should this fail to load the fall back font is sans serif.
+ Button font is 'Days One' imported from cdn fonts available at [cdn fonts](https://www.cdnfonts.com). Should this fail to load the fall back font is sans serif.
 
 ### Wireframes
 Wireframes for a responsive design have been created. The homepage design is shown below. All other wireframes can be viewed [here.](wireframes)
@@ -52,11 +58,3 @@ In the credits section, we provide information about the sources used
 Fonts imported from [cdn fonts](https://www.cdnfonts.com).
 Image titles created at [flaming text](https://eu1.flamingtext.com).
 
-## The Starathon Team and contributions
-  
-| Member | Role |  
-|--|--|
-| [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/About page |
-| [João Rodrigues](https://github.com/Joao4569) | Quiz Button Functionality/Content |
-| [Gemma Butcher](https://github.com/GemmaButcher-dev) | Design/Content |
-| [Vernell C](https://github.com/VCGithubCode) | Frontend Navbar Logic Functionality/Styling/Content/Design |
