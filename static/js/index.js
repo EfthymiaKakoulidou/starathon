@@ -8,6 +8,9 @@ document.querySelector('#burger').addEventListener('click',(e) => {
 
 // Game Logic
 
+let timer;
+const TIMER_DURATION = 10;
+
 // Declare the shuffled game data iterator
 let shuffledGameDataIterator;
 
@@ -66,6 +69,7 @@ function shuffleArray(array) {
 
 // Display the next question
 function displayNextQuestion() {
+    startTimer();
 
     // Get the next item from the shuffled game data iterator
     let nextItem = shuffledGameDataIterator.next();
@@ -122,6 +126,7 @@ function attachAnswerListeners(shuffledAnswers, nextItem) {
         // Get the answer element
         let answerElement = document.getElementById(`answer${index}`);
         answerElement.addEventListener('click', function() {
+            stopTimer();
 
             // Display the modal with the result of the answer
             if (answer === nextItem.value.correctAnswer) {
@@ -147,3 +152,21 @@ function attachNextQuestionListener() {
     nextQuestionButton.addEventListener('click', displayNextQuestion);
 }
 
+function startTimer() {
+    let timeLeft = TIMER_DURATION;
+    document.getElementById('timer').textContent = timeLeft;
+
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('timer').textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            displayNextQuestion();
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timer);
+}
