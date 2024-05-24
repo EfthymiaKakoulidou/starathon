@@ -107,10 +107,6 @@ function generateQuestionHTML(nextItem, shuffledAnswers) {
                  <label for="answer${index}">${answer}</label></div>`;
     });
 
-    // Generate the HTML for the next question button
-    html += `<button id="next-question-button" type="button" class="game-start"
-             aria-label="Button for next trivia question.">Next Question</button>`;
-
     // Return the generated HTML
     return html;
 }
@@ -147,12 +143,6 @@ nextQuestionModalButton.addEventListener('click', function() {
     modal.style.display = "none";
     displayNextQuestion();
 });
-
-// Attach event listener to the next question button
-function attachNextQuestionListener() {
-    let nextQuestionButton = document.getElementById('next-question-button');
-    nextQuestionButton.addEventListener('click', displayNextQuestion);
-}
 
 function startTimer() {
     let timeLeft = TIMER_DURATION;
