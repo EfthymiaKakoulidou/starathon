@@ -8,13 +8,22 @@ document.querySelector('#burger').addEventListener('click',(e) => {
 
 // Game Logic
 
+// Declare the shuffled game data iterator
 let shuffledGameDataIterator;
 
-// Trigger the fetchGameData function when the page is loaded
-fetchGameData();
-function fetchGameData() {
+// Game start trigger button
+let startGame = document.getElementById('start-game-button');
+startGame.addEventListener('click', triviaGame);
+
+function triviaGame() {
+
+    // Fetch the game data
     fetch('./static/js/game_data/game_data.json')
+
+    // Parse the JSON data
     .then(response => response.json())
+
+    // Handle the parsed data and create the game
     .then(function(game_data) {
 
         // Shuffle the order of the game data
@@ -33,6 +42,8 @@ function fetchGameData() {
 
 // Shuffle an array's elements order
 function shuffleArray(array) {
+
+    // Create a copy of the array
     let currentIndex = array.length, temporaryValue, randomIndex;
 
     // While there remain elements to shuffle...
@@ -54,19 +65,36 @@ function shuffleArray(array) {
 
 // Display the next question
 function displayNextQuestion() {
+
+    // Get the next item from the shuffled game data
     let nextItem = shuffledGameDataIterator.next();
+
+    // Get the game area element
+    let gameArea = document.getElementById('game-area');
+
     if (!nextItem.done) {
-        // Display the question and answers
-        console.log(nextItem.value.question);
-        console.log(nextItem.value.answers[0]);
-        console.log(nextItem.value.answers[1]);
-        console.log(nextItem.value.answers[2]);
-        console.log(nextItem.value.answers[3]);
+
+        // Shuffle the answers
+        let shuffledAnswers = shuffleArray([...nextItem.value.answers]);
+        
+        // Create the HTML for the question and answers
+        let html = `<h2>${nextItem.value.question}</h2>`;
+        shuffledAnswers.forEach((answer, index) => {
+            html += `<div><input type="radio" id="answer${index}" name="answer" value="${answer}">
+                     <label for="answer${index}">${answer}</label></div>`;
+        });
+        html += `<button id="next-question-button" type="button" class="game-start"
+                 aria-label="Button for next trivia question.">Next Question</button>`;
+
+        // Add the HTML to the game area
+        gameArea.innerHTML = html;
+
+        // Add a click event listener to the next question button
+        let nextQuestionButton = document.getElementById('next-question-button');
+        nextQuestionButton.addEventListener('click', displayNextQuestion);
+
     } else {
-        console.log('No more questions');
+        gameArea.innerHTML = '<h2>No more questions</h2>';
     }
 }
 
-// Add a click event listener to the button
-let button = document.getElementById('next-question-button');
-button.addEventListener('click', displayNextQuestion);
