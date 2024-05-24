@@ -1,4 +1,3 @@
-
 # SUBMISSION
 ## Deployment
 #### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
@@ -58,3 +57,11 @@ In the credits section, we provide information about the sources used
 Fonts imported from [cdn fonts](https://www.cdnfonts.com).
 Image titles created at [flaming text](https://eu1.flamingtext.com).
 
+## The Starathon Team and contributors
+
+| Member | Role |  
+|--|--|
+| [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/About page |
+| [João Rodrigues](https://github.com/Joao4569) | Quiz Button Functionality/Content |
+| [Gemma Butcher](https://github.com/GemmaButcher-dev) | Design/Content |
+| [Vernell C](https://github.com/VCGithubCode) | Frontend Navbar Logic Functionality/Styling/Content/Design |
