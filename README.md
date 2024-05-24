@@ -45,3 +45,4 @@ In the tech section, we provide information about the technology stack, dependen
 In the credits section, we provide information about the sources used
 Fonts imported from [cdn fonts](https://www.cdnfonts.com).
 Image titles created at [flaming text](https://eu1.flamingtext.com).
+Favicon created at [favicon.io](https://favicon.io/favicon-converter/).
