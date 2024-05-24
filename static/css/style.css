@@ -1,23 +1,352 @@
-/* Background image */
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url('https://fonts.cdnfonts.com/css/days-one');
+@import url('https://fonts.cdnfonts.com/css/sf-distant-galaxy');
+                
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: url('../images/bgstarwars.webp') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  display: flex;
+  flex-direction: column;
+  background-image: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
   background-size: cover;
+  min-height: 100dvh;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Trivia main container */
-#main-container {
-  /* background-color: brown; used for testing purposes */
-  margin-top: 30vh;
-  
+#container {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 1.30svh;
+  right: 0%;
 }
 
-/* Welcome Message */
+header {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  background-color: rgba(33, 33, 33, 0.474);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.571);
+  box-shadow: 0 0 5px 3px rgba(255, 253, 156, 0.526);
+  z-index: 3;
+}
+
+.logo {
+  font-family: 'Star Wars', sans-serif;
+  top: 1.30svh;
+  font-size: 1.2em;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.704);
+}
+
+.logo:hover {
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 4px yellow;
+}
+
+#burger {
+  cursor: pointer;
+  opacity: 0;
+  animation: fadein 0.2s ease 1s forwards;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#burger .bun,
+#burger .filling {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  height: 15%;
+  width: 70%;
+  transform-origin: 50% 50%;
+  transition: top 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+}
+
+#burger .bun:before,
+#burger .bun:after,
+#burger .filling:before,
+#burger .filling:after {
+  content: "";
+  display: block;
+  height: 40%;
+  background: rgb(226, 226, 226);
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -45%);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+#burger .bun:before {
+  left: 0;
+  width: calc(-1px + 75%);
+  border-radius: 10px 0px 0px 10px;
+}
+#burger .bun:after {
+  right: 0;
+  width: calc(-1px + 25%);
+}
+
+#burger:hover .bun.top:before {
+  background: #fee;
+  box-shadow: #f00 0px 0px 10px 1px;
+}
+#burger:hover .bun.bottom:before {
+  background: #dff;
+  box-shadow: #0ff 0px 0px 10px 1px;
+}
+#burger:hover .filling:before {
+  background: #efe;
+  box-shadow: #0f0 0px 0px 10px 1px;
+}
+#burger .bun.top {
+  top: 25%;
+}
+#burger .bun.bottom {
+  top: 75%;
+}
+
+#burger .filling {
+  top: 50%;
+  left: 50%;
+  height: 15%;
+  width: 70%;
+  position: absolute;
+  transition: transform 0.4s ease, top 0.4s ease;
+  transform: translate(-50%, -50%) rotate(90deg);
+  animation: green-ls-out 0.8s ease forwards;
+}
+
+#burger .filling:before {
+  left: 0;
+  width: calc(-1px + 75%);
+}
+
+#burger .filling:after {
+  right: 0;
+  width: calc(-1px + 25%);
+  border-radius: 0 10px 10px 0;
+}
+
+#burger.active .bun {
+  border-radius: 3px;
+  top: 50%;
+  transition: top 0.4s ease, transform 0.4s ease;
+}
+
+#burger.active .bun.top {
+  transform: translate(-50%, -50%) rotate(-225deg);
+}
+
+#burger.active .bun.bottom {
+  transform: translate(-50%, -50%) rotate(405deg);
+}
+
+#burger.active .filling {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  animation: green-ls-in 0.8s ease forwards;
+}
+
+nav {
+    font-family: 'SF Distant Galaxy', sans-serif;
+    color: white;
+    background: #111111a1;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    top: 80px;
+    bottom: 0px;
+    padding-left: 16px;
+    width: 300px;
+    display: none;
+}
+
+nav.show {
+    right: 0%;
+    padding-left: 0;
+    transform: translateX(0%);
+    overflow: hidden;
+    display: flex;
+    width: 200px;
+    height: 385px;
+    max-width: 100%;
+    max-height: 75%;
+    top: 5.2rem;
+    box-shadow: 0 0 20px 2px yellow;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  font-size: 1.75em;
+  line-height: 1.25em;
+  padding: 0px;
+  padding-right: 0.5rem;
+  margin: 1rem 0;
+  width: 0;
+  border-radius: 0px 100px 100px 0px;
+  transition: width 0.2s ease, padding 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+  background: #72f2ff;
+  box-shadow: #00bbff 0px 0px 0px 2px;
+}
+
+nav ul li:hover {
+  box-shadow: #00bbff 0px 0px 20px 2px;
+  text-shadow: #00bbff 0px 0px 6px, #00bbff 0px 0px 10px;
+}
+nav ul li:hover {
+  width: 90%;
+  padding: 0px 16px 0px 0px;
+  color: black;
+}
+
+.selected {
+  color: yellow
+}
+
+nav ul li a {
+    display: flex;
+    flex-direction: row-reverse;
+    text-decoration: none;
+    width: 12.5rem;
+    color: inherit;
+    padding-right: 0.4rem;
+}
+
+nav ul li.green {
+  background: #e6ffe6;
+  box-shadow: #00ff00 0px 0px 0px 2px;
+}
+nav ul li.green:hover {
+  box-shadow: #00ff00 0px 0px 20px 2px;
+  text-shadow: #00ff00 0px 0px 6px, #00ff00 0px 0px 10px;
+}
+nav ul li.red {
+  background: #ffe6e6;
+  box-shadow: #ff0000 0px 0px 0px 2px;
+}
+nav ul li.red:hover {
+  box-shadow: #ff0000 0px 0px 20px 2px;
+  text-shadow: #ff0000 0px 0px 6px, #ff0000 0px 0px 10px;
+}
+nav ul li.purple {
+  background: #ffe6ff;
+  box-shadow: #ff00ff 0px 0px 0px 2px;
+}
+nav ul li.purple:hover {
+  box-shadow: #ff00ff 0px 0px 20px 2px;
+  text-shadow: #ff00ff 0px 0px 6px, #ff00ff 0px 0px 10px;
+}
+nav ul li.yellow {
+  background: #ffffe6;
+  box-shadow: #ffff00 0px 0px 0px 2px;
+}
+nav ul li.yellow:hover {
+  box-shadow: #ffff00 0px 0px 20px 2px;
+  text-shadow: #ffff00 0px 0px 6px, #ffff00 0px 0px 10px;
+}
+
+@keyframes green-ls-in {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-90deg) translate(200%, 0%);
+  }
+}
+
+@keyframes green-ls-out {
+  0% {
+    transform: translate(-50%, -200%) rotate(-90deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
 h1 {
-  font-size: 3rem !important;
-  color: rgb(254, 233, 8) !important;
+  text-align: center;
+}
+
+.welcome-hidden {
+  display: none;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 24rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  animation: fadein 1500ms;
+  animation-delay: 0.5s;
+}
+
+.game-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem auto;
+  background-color: rgba(166, 166, 166, 0.215);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.5rem;
+  width: 12rem;
+  height: 2.5rem;
+  font-family: 'Days One', sans serif;
+}
+
+footer {
+  width: 100%;
+  font-family: 'Days One', sans serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  background-color: rgba(33, 33, 33, 0.686);
+  border-top: 1px solid rgba(255, 255, 255, 0.571);
+  box-shadow: 0 0 5px 3px rgba(255, 253, 156, 0.526);
+  z-index: 3;
+  overflow: hidden;
 }
 
 /* Trivia start button */
@@ -28,4 +357,25 @@ h1 {
 .start-button:hover {
   background-color: rgb(254, 233, 8) !important;
   color: black !important;
+}
+
+
+@media screen and (min-width: 320) {
+
+}
+
+@media screen and (min-width: 425px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1440px) {
+
 }
