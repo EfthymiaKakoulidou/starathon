@@ -79,6 +79,8 @@ function displayNextQuestion() {
 
     // If there are no more questions, display a message
     if (nextItem.done) {
+        stopTimer();
+        document.getElementById('timer').textContent = null;
         gameArea.innerHTML = '<h2>No more questions</h2>';
         return;
     }
