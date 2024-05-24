@@ -31,7 +31,6 @@ function triviaGame() {
 
         // Shuffle the order of the game data
         let shuffledGameData = shuffleArray([...game_data]);
-        console.log(shuffledGameData);
 
         // Create an iterator for the shuffled game data
         shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
@@ -70,6 +69,11 @@ function shuffleArray(array) {
 // Display the next question
 function displayNextQuestion() {
     startTimer();
+    // Create a new Audio object
+    let audio = new Audio('./static/sounds/c3p0-cheer.mp3');
+
+    // Play the audio
+    audio.play();
 
     // Get the next item from the shuffled game data iterator
     let nextItem = shuffledGameDataIterator.next();
@@ -92,7 +96,6 @@ function displayNextQuestion() {
 
     // Attach event listeners to the answers and next question button
     attachAnswerListeners(shuffledAnswers, nextItem);
-    attachNextQuestionListener();
 }
 
 // Generate the HTML for the question and answers
@@ -106,10 +109,6 @@ function generateQuestionHTML(nextItem, shuffledAnswers) {
         html += `<div><input type="radio" id="answer${index}" name="answer" value="${answer}">
                  <label for="answer${index}">${answer}</label></div>`;
     });
-
-    // Generate the HTML for the next question button
-    html += `<button id="next-question-button" type="button" class="game-start"
-             aria-label="Button for next trivia question.">Next Question</button>`;
 
     // Return the generated HTML
     return html;
@@ -147,12 +146,6 @@ nextQuestionModalButton.addEventListener('click', function() {
     modal.style.display = "none";
     displayNextQuestion();
 });
-
-// Attach event listener to the next question button
-function attachNextQuestionListener() {
-    let nextQuestionButton = document.getElementById('next-question-button');
-    nextQuestionButton.addEventListener('click', displayNextQuestion);
-}
 
 function startTimer() {
     let timeLeft = TIMER_DURATION;
