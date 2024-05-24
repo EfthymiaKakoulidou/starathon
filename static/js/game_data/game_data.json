@@ -1,42 +1,52 @@
 [
     {
-      "question": "Question 1",
+      "question": "What is the name of Han Solo's ship?",
       "answers": [
-        "Answer 1",
-        "Answer 2",
-        "Answer 3",
-        "Answer 4"
+        "The Star Destroyer",
+        "The Millennium Falcon",
+        "The X-Wing",
+        "The TIE Fighter"
       ],
-      "correctAnswer": "Answer 1"
+      "correctAnswer": "The Millennium Falcon"
     },
     {
-      "question": "Question 2",
+      "question": "Who is Luke Skywalker's father?",
       "answers": [
-        "Answer 1",
-        "Answer 2",
-        "Answer 3",
-        "Answer 4"
+        "Obi-Wan Kenobi",
+        "Yoda",
+        "Darth Vader",
+        "Han Solo"
       ],
-      "correctAnswer": "Answer 1"
+      "correctAnswer": "Darth Vader"
     },
     {
-        "question": "Question 3",
+        "question": "What planet is Princess Leia from?",
         "answers": [
-          "Answer 1",
-          "Answer 2",
-          "Answer 3",
-          "Answer 4"
+          "Tatooine",
+          "Naboo",
+          "Coruscant",
+          "Alderaan"
         ],
-        "correctAnswer": "Answer 1"
+        "correctAnswer": "Alderaan"
       },
       {
-        "question": "Question 4",
+        "question": "Who trained Luke Skywalker in 'The Empire Strikes Back'?",
         "answers": [
-          "Answer 1",
-          "Answer 2",
-          "Answer 3",
-          "Answer 4"
+          "Obi-Wan Kenobi",
+          "Yoda",
+          "Darth Vader",
+          "Qui-Gon Jinn"
         ],
-        "correctAnswer": "Answer 1"
+        "correctAnswer": "Yoda"
+      },
+      {
+        "question": "What colour is Mace Windu's lightsaber??",
+        "answers": [
+          "Blue",
+          "Green",
+          "Red",
+          "Purple"
+        ],
+        "correctAnswer": "Purple"
       }
   ]
