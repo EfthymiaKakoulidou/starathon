@@ -20,16 +20,55 @@ const TIMER_DURATION = 10;
 // Declare the shuffled game data iterator
 let shuffledGameDataIterator;
 
+
+// Easy Mode
 // Game start trigger button for youngling
 let startGameEasy = document.getElementById('start-game-easy');
+
+// Change the text of the button when the mouse hovers over it
+startGameEasy.addEventListener('mouseover', function() {
+    startGameEasy.textContent = 'Easy';
+});
+
+// Change the text of the button when the mouse leaves it
+startGameEasy.addEventListener('mouseout', function() {
+    startGameEasy.textContent = 'Youngling';
+});
+
 startGameEasy.addEventListener('click', triviaGameEasy);
 
+// Intermediate Mode
 // Game start trigger button for padawan
 let startGameMedium = document.getElementById('start-game-medium');
+
+// Change the text of the button when the mouse hovers over it
+startGameMedium.addEventListener('mouseover', function() {
+    startGameMedium.textContent = 'Intermediate';
+});
+
+// Change the text of the button when the mouse leaves it
+startGameMedium.addEventListener('mouseout', function() {
+    startGameMedium.textContent = 'Padawan';
+});
+
+// Game start trigger button for Padawan
 startGameMedium.addEventListener('click', triviaGameMedium);
 
+
+// Hard Mode
 // Game start trigger button for Grand Master
 let startGameHard = document.getElementById('start-game-hard');
+
+// Change the text of the button when the mouse hovers over it
+startGameHard.addEventListener('mouseover', function() {
+    startGameHard.textContent = 'Hard';
+});
+
+// Change the text of the button when the mouse leaves it
+startGameHard.addEventListener('mouseout', function() {
+    startGameHard.textContent = 'Grand Master';
+});
+
 startGameHard.addEventListener('click', triviaGameHard);
 
 // Game start youngling
