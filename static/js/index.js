@@ -28,80 +28,100 @@ startGameHard.addEventListener('click', triviaGameHard);
 
 // Game start youngling
 function triviaGameEasy() {
+
+    // "I like those odds audio"
+    let audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio.play();
+
+    setTimeout(function() {
+        // Fetch the game data
+        fetch('./static/js/game_data/game_data_easy.json')
+
+        // Parse the JSON data
+        .then(response => response.json())
+
+        // Handle the parsed data and create the game
+        .then(function(game_data) {
+
+            // Shuffle the order of the game data
+            let shuffledGameData = shuffleArray([...game_data]);
+
+            // Create an iterator for the shuffled game data
+            shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+
+            // Display the first question
+            displayNextQuestion();
+            
+        })
+        // Handle any errors
+        .catch(error => console.error('Error:', error));
+    }, 2330);
   
-    // Fetch the game data
-    fetch('./static/js/game_data/game_data_easy.json')
-
-    // Parse the JSON data
-    .then(response => response.json())
-
-    // Handle the parsed data and create the game
-    .then(function(game_data) {
-
-        // Shuffle the order of the game data
-        let shuffledGameData = shuffleArray([...game_data]);
-
-        // Create an iterator for the shuffled game data
-        shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
-
-        // Display the first question
-        displayNextQuestion();
-        
-    })
-    // Handle any errors
-    .catch(error => console.error('Error:', error));
+    
 }
 
 // Game start padawan
 function triviaGameMedium() {
   
-    // Fetch the game data
-    fetch('./static/js/game_data/game_data_medium.json')
+    // "I like those odds audio"
+    let audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio.play();
 
-    // Parse the JSON data
-    .then(response => response.json())
+    setTimeout(function() {
+        // Fetch the game data
+        fetch('./static/js/game_data/game_data_medium.json')
 
-    // Handle the parsed data and create the game
-    .then(function(game_data) {
+        // Parse the JSON data
+        .then(response => response.json())
 
-        // Shuffle the order of the game data
-        let shuffledGameData = shuffleArray([...game_data]);
+        // Handle the parsed data and create the game
+        .then(function(game_data) {
 
-        // Create an iterator for the shuffled game data
-        shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+            // Shuffle the order of the game data
+            let shuffledGameData = shuffleArray([...game_data]);
 
-        // Display the first question
-        displayNextQuestion();
-        
-    })
-    // Handle any errors
-    .catch(error => console.error('Error:', error));
+            // Create an iterator for the shuffled game data
+            shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+
+            // Display the first question
+            displayNextQuestion();
+            
+        })
+        // Handle any errors
+        .catch(error => console.error('Error:', error));
+    }, 2330)
 }
 
 // Game start Grand Master
 function triviaGameHard() {
   
-    // Fetch the game data
-    fetch('./static/js/game_data/game_data_hard.json')
+    // "I like those odds audio"
+    let audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio.play();
 
-    // Parse the JSON data
-    .then(response => response.json())
+    setTimeout(function() {
+        // Fetch the game data
+        fetch('./static/js/game_data/game_data_hard.json')
 
-    // Handle the parsed data and create the game
-    .then(function(game_data) {
+        // Parse the JSON data
+        .then(response => response.json())
 
-        // Shuffle the order of the game data
-        let shuffledGameData = shuffleArray([...game_data]);
+        // Handle the parsed data and create the game
+        .then(function(game_data) {
 
-        // Create an iterator for the shuffled game data
-        shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+            // Shuffle the order of the game data
+            let shuffledGameData = shuffleArray([...game_data]);
 
-        // Display the first question
-        displayNextQuestion();
-        
-    })
-    // Handle any errors
-    .catch(error => console.error('Error:', error));
+            // Create an iterator for the shuffled game data
+            shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+
+            // Display the first question
+            displayNextQuestion();
+            
+        })
+        // Handle any errors
+        .catch(error => console.error('Error:', error));
+    }, 2330)
 }
 
 // Shuffle an array's elements order
