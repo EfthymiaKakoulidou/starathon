@@ -107,13 +107,13 @@ function triviaGameMedium() {
             displayNextQuestion();
 
             // Create a new Audio object
-            audio = new Audio('./static/sounds/cantina-band.mp3');
-            audio.play();
+            themeAudio = new Audio('./static/sounds/cantina-band.mp3');
+            themeAudio.play();
             
             // Play the audio every 26 seconds
             setInterval(function() {
-                audio.currentTime = 0;
-                audio.play();
+                themeAudio.currentTime = 0;
+                themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
             
         })
@@ -152,13 +152,13 @@ function triviaGameHard() {
             displayNextQuestion();
 
             // Create a new Audio object
-            audio = new Audio('./static/sounds/cantina-band.mp3');
-            audio.play();
+            themeAudio = new Audio('./static/sounds/cantina-band.mp3');
+            themeAudio.play();
             
             // Play the audio every 26 seconds
             setInterval(function() {
-                audio.currentTime = 0;
-                audio.play();
+                themeAudio.currentTime = 0;
+                themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
             
         })
@@ -222,7 +222,12 @@ function displayNextQuestion() {
                               ;
         let returnHome = document.getElementById('return-home');
         returnHome.addEventListener('click', function() {
-            window.location.href = 'index.html';
+            audio = new Audio('./static/sounds/roger-roger-sound.mp3');
+            audio.play();
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1900);
+            
         });
 
         return;
