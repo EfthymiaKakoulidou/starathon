@@ -107,13 +107,13 @@ function triviaGameMedium() {
             displayNextQuestion();
 
             // Create a new Audio object
-            audio = new Audio('./static/sounds/cantina-band.mp3');
-            audio.play();
+            themeAudio = new Audio('./static/sounds/cantina-band.mp3');
+            themeAudio.play();
             
             // Play the audio every 26 seconds
             setInterval(function() {
-                audio.currentTime = 0;
-                audio.play();
+                themeAudio.currentTime = 0;
+                themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
             
         })
@@ -152,13 +152,13 @@ function triviaGameHard() {
             displayNextQuestion();
 
             // Create a new Audio object
-            audio = new Audio('./static/sounds/cantina-band.mp3');
-            audio.play();
+            themeAudio = new Audio('./static/sounds/cantina-band.mp3');
+            themeAudio.play();
             
             // Play the audio every 26 seconds
             setInterval(function() {
-                audio.currentTime = 0;
-                audio.play();
+                themeAudio.currentTime = 0;
+                themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
             
         })
@@ -212,7 +212,24 @@ function displayNextQuestion() {
         }
 
         document.getElementById('timer').textContent = null;
-        gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions} </h1><h2>No more questions</h2>`;
+        gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions} </h1>
+                              <h2>No more questions</h2>
+                              <div>
+                                  <button id="return-home" href="index.html" type="button" class="game-start" aria-label="button to return to home page">
+                                      Return to Home
+                                  </button>
+                              </div>`
+                              ;
+        let returnHome = document.getElementById('return-home');
+        returnHome.addEventListener('click', function() {
+            audio = new Audio('./static/sounds/roger-roger-sound.mp3');
+            audio.play();
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1900);
+            
+        });
+
         return;
     }
 
