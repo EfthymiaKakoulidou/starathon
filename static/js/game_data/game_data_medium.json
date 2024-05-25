@@ -1,0 +1,52 @@
+[
+    {
+      "question": "What is the name of Boba Fett's ship?",
+      "answers": [
+        "Slave I",
+        "The Ghost",
+        "Razor Crest",
+        "The Phantom"
+      ],
+      "correctAnswer": "Slave I"
+    },
+    {
+      "question": "Who is the supreme leader of the First Order in 'The Force Awakens'?",
+      "answers": [
+        "Kylo Ren",
+        "General Hux",
+        "Snoke",
+        "Captain Phasma"
+      ],
+      "correctAnswer": "Snoke"
+    },
+    {
+        "question": "Which species stole the plans to the Death Star?",
+        "answers": [
+          "Wookiees",
+          "Bothans",
+          "Ewoks",
+          "Jawas"
+        ],
+        "correctAnswer": "Bothans"
+      },
+      {
+        "question": "Who killed Jango Fett?",
+        "answers": [
+          "Obi-Wan Kenobi",
+          "Anakin Skywalker",
+          "Yoda",
+          "Mace Windu"
+        ],
+        "correctAnswer": "Mace Windu"
+      },
+      {
+        "question": "What was Finn's stormtrooper designation?",
+        "answers": [
+          "FN-2187",
+          "FN-2207",
+          "FN-2199",
+          "FN-2233"
+        ],
+        "correctAnswer": "FN-2187"
+      }
+  ]

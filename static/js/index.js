@@ -14,14 +14,75 @@ const TIMER_DURATION = 10;
 // Declare the shuffled game data iterator
 let shuffledGameDataIterator;
 
-// Game start trigger button
-let startGame = document.getElementById('start-game-button');
-startGame.addEventListener('click', triviaGame);
+// Game start trigger button for youngling
+let startGameEasy = document.getElementById('start-game-easy');
+startGameEasy.addEventListener('click', triviaGameEasy);
 
-function triviaGame() {
+// Game start trigger button for padawan
+let startGameMedium = document.getElementById('start-game-medium');
+startGameMedium.addEventListener('click', triviaGameMedium);
 
+// Game start trigger button for Grand Master
+let startGameHard = document.getElementById('start-game-hard');
+startGameHard.addEventListener('click', triviaGameHard);
+
+// Game start youngling
+function triviaGameEasy() {
+  
     // Fetch the game data
-    fetch('./static/js/game_data/game_data.json')
+    fetch('./static/js/game_data/game_data_easy.json')
+
+    // Parse the JSON data
+    .then(response => response.json())
+
+    // Handle the parsed data and create the game
+    .then(function(game_data) {
+
+        // Shuffle the order of the game data
+        let shuffledGameData = shuffleArray([...game_data]);
+
+        // Create an iterator for the shuffled game data
+        shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+
+        // Display the first question
+        displayNextQuestion();
+        
+    })
+    // Handle any errors
+    .catch(error => console.error('Error:', error));
+}
+
+// Game start padawan
+function triviaGameMedium() {
+  
+    // Fetch the game data
+    fetch('./static/js/game_data/game_data_medium.json')
+
+    // Parse the JSON data
+    .then(response => response.json())
+
+    // Handle the parsed data and create the game
+    .then(function(game_data) {
+
+        // Shuffle the order of the game data
+        let shuffledGameData = shuffleArray([...game_data]);
+
+        // Create an iterator for the shuffled game data
+        shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+
+        // Display the first question
+        displayNextQuestion();
+        
+    })
+    // Handle any errors
+    .catch(error => console.error('Error:', error));
+}
+
+// Game start Grand Master
+function triviaGameHard() {
+  
+    // Fetch the game data
+    fetch('./static/js/game_data/game_data_hard.json')
 
     // Parse the JSON data
     .then(response => response.json())
@@ -70,10 +131,10 @@ function shuffleArray(array) {
 function displayNextQuestion() {
     startTimer();
     // Create a new Audio object
-    let audio = new Audio('./static/sounds/c3p0-cheer.mp3');
+    /* let audio = new Audio('./static/sounds/c3p0-cheer.mp3');
 
     // Play the audio
-    audio.play();
+    audio.play(); */
 
     // Get the next item from the shuffled game data iterator
     let nextItem = shuffledGameDataIterator.next();
