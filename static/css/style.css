@@ -683,6 +683,13 @@ footer {
 /* #6.1 - Modal ===================================== */
 /* ================================================== */
 
+.result-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+}
+
 
 .modal {
   display: none;
