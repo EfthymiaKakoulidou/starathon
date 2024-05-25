@@ -402,7 +402,14 @@ footer {
   color: yellow ;
 }
 
+/* About Page */
+
+.about-area {
+  display: flex ;
+}
+
 /* 404 page */
+
 .baby-yoda-img {
 margin: -50% 0 0 10%;
 width: 90%;
