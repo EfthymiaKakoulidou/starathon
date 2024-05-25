@@ -35,7 +35,7 @@ The goal section provides a concise summary of the main objective or purpose of 
 ### Colors
 The primary color palette for the app is shown below.
 
-![mobile phone wireframe of website](static/images/color-pallette.png)
+![mobile phone wireframe of website](static/images/color-palette.png)
 
 ### Imagery
 
