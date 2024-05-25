@@ -22,16 +22,27 @@
  *  6.3 - Key Frames
  *  6.4 - Alerts
  *  6.5 - Buttons
+ *  6.6 - Sounds
  *  7.0 - Media Queries
 */
 
 /* Waiting on global styles here */
 
-/* --root color variables etc go here */
 
 /* ================================================== */
 /* #0.0 - Variables ================================= */
 /* ================================================== */
+
+
+:root {
+  -—primary-color: #ffff00;       /* Yellow */
+  -—secondary-color: #ffffff;      /*white*/
+  -—btn-background: #a6a6a637;     /*grey*/
+  -—accent-color-1: #000000;       /*black*/
+  -—accent-color-2: #00ff00;       /*green*/
+  -—accent-color-3: #ff0000;       /*red*/
+  -—accent-color-3: #ff00ff;      /*purple*/
+}
 
 @import url('https://fonts.cdnfonts.com/css/star-wars');
 @import url('https://fonts.cdnfonts.com/css/days-one');
@@ -78,6 +89,11 @@ h2 {
   text-align: center;
 }
 
+.intro-text {
+  font-size: 1rem;
+  margin: 25px auto;
+}
+
 main {
   flex-grow: 1;
   overflow: hidden;
@@ -102,7 +118,7 @@ header {
   padding: 1.5rem 1rem;
   background-color: #21212179;
   border-bottom: 1px solid #ffffff92;
-  box-shadow: 0 0 5px 3px #fffd9c86;
+  box-shadow: 0 0 5px 3px #ffffff86;
   z-index: 3;
 }
 
@@ -492,7 +508,7 @@ footer {
   padding: 0.5rem 1rem;
   background-color: #212121af;
   border-top: 1px solid #ffffff92;
-  box-shadow: 0 0 5px 3px #fffd9c86;
+  box-shadow: 0 0 5px 3px #ffffff92;
   z-index: 3;
   overflow: hidden;
 }
@@ -519,60 +535,9 @@ footer {
   color: #ffff00;
 }
 
-
-/* About Page */
-
-.about-area {
-  display: flex ;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.about-img {
-  width: 150px;
-  height: 150px;
-  margin: 20px;
-  border-radius: 50%;
-  box-shadow: #ffff00 0px 0px 20px 2px;
-  text-shadow: #ffff00 0px 0px 6px, #ffff00 0px 0px 10px;
-}
-
-.about-card {
-  width:200px;
-  height:300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-card-body {
-  text-align: center;
-  background-color: rgba(0,0,0,0);
-}
-
-.about-title {
-  font-family: "Days One", sans-serif;
-  color:yellow !important;
-}
-
-.fa {
-  margin: 10px;
-  color: #ffff00;
-}
-
 /* ================================================== */
 /* #5.6 - Error 404 page ============================ */
 /* ================================================== */
-
-/* 404 page */
-
-.baby-yoda-img {
-margin: -50% 0 0 10%;
-width: 90%;
-height: auto;
 
 .error-container {
   display: flex;
@@ -669,6 +634,24 @@ height: auto;
 }
 
 /* ==== End of Timer styles ==== */
+
+
+/* ================================================== */
+/* #6.5 - Variables ================================= */
+/* ================================================== */
+
+#start-game-easy,
+#start-game-medium {
+  margin-bottom: 25px;
+}
+
+/* ==== End of Variables styles ==== */
+
+.sound {
+  /* display: none; */
+  color: #ffffff;
+  margin: 0 0 0 25px;
+}
 
 /* ================================================== */
 /* #7.0 - Media Queries ============================= */
