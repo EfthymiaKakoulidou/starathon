@@ -483,8 +483,8 @@ nav ul li.yellow:hover {
   height: 150px;
   margin: 20px;
   border-radius: 50%;
-  box-shadow: #ffff00 0px 0px 20px 2px;
-  text-shadow: #ffff00 0px 0px 6px, #ffff00 0px 0px 10px;
+  box-shadow: #ffd700 0px 0px 20px 2px;
+  text-shadow: #ffd700 0px 0px 6px, #ffd700 0px 0px 10px;
 }
 
 .about-card {
@@ -503,12 +503,12 @@ nav ul li.yellow:hover {
 
 .about-title {
   font-family: "Days One", sans-serif;
-  color:yellow !important;
+  color:#ffd700;
 }
 
 .fa {
   margin: 10px;
-  color: #ffff00;
+  color: #ffd700;
 }
 
 
