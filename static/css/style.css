@@ -407,20 +407,25 @@ footer {
 .about-area {
   display: flex ;
   justify-content: center;
+  flex-wrap: wrap;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .about-img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
   border-radius: 50%;
   box-shadow: #ffff00 0px 0px 20px 2px;
   text-shadow: #ffff00 0px 0px 6px, #ffff00 0px 0px 10px;
 }
 
 .about-card {
-  width:150px;
-  height:150px;
+  width:200px;
+  height:300px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -436,8 +441,10 @@ footer {
 }
 
 .fa {
+  margin: 10px;
   color: #ffff00;
 }
+
 
 /* 404 page */
 
