@@ -210,6 +210,7 @@ nextQuestionModalButton.addEventListener('click', function() {
 
 function startTimer() {
     let timeLeft = TIMER_DURATION;
+    document.getElementById('timer').classList.add('countdown');
     document.getElementById('timer').textContent = timeLeft;
 
     timer = setInterval(() => {
@@ -225,4 +226,5 @@ function startTimer() {
 
 function stopTimer() {
     clearInterval(timer);
+    document.getElementById('timer').classList.remove('countdown');
 }
