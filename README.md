@@ -21,7 +21,7 @@ In this section, we will briefly discuss how our team addressed the applicable c
 
 # ABOUT SUBMISSION
 ## Intro
-One or two paragraphs providing an overview of our project
+This Star Wars quiz is a fun interactive front-end web application presented in a quiz format. The quiz format is randomly selected questions based on the Star Wars franchise. End Users can test their Star Wars knowledge in different difficulty levels.
 
 ## Goal
 The goal section provides a concise summary of the main objective or purpose of the project or software described in this README. It addresses the following aspects:
@@ -49,8 +49,39 @@ Wireframes for a responsive design have been created. The homepage design is sho
 
 ![mobile phone wireframe of website](wireframes/start-screen.png)
 
+## User Experience (UX)
+
+#### Key information for the site
+
+This section provides insight into the UX process, focusing on who this quiz is for, the main aims of the project and how the website can help users meet their needs.
+
+Project goals:
+- To encourage people to take our Star Wars quiz.
+- To let users select different levels of difficulty.
+- To provide users with feedback so that they know what they have gotten wrong and to learn the correct answer.
+
+### User Stories
+
+#### First-Time Visitor Goals
+
+- As a first-time visitor, I want to take part in a Star Wars quiz so that I can test my knowledge about the StarWars franchise.
+- As a first-time visitor, I want to play the quiz on different devices so that I can use all my devices at my convenience.
+- As a first-time visitor, I want to navigate easily the site so that I can understand quickly the game mechanics.
+
+#### Returning Visitor Goals
+
+- As a returning visitor, I want to select the level of difficulty so that I can play in different modes and test further my knowledge. 
+
+#### Frequent Visitor Goals
+- As a frequent visitor, I want to select the level of difficulty so that I can unlock as many questions as possible to improve. 
+
+---
+
 ## Tech
 In the tech section, we provide information about the technology stack, dependencies, and any technical details related to the project.
+
+## Testing
+Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ## Credits
 In the credits section, we provide information about the sources used

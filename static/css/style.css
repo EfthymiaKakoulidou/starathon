@@ -519,9 +519,60 @@ footer {
   color: #ffff00;
 }
 
+
+/* About Page */
+
+.about-area {
+  display: flex ;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.about-img {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 50%;
+  box-shadow: #ffff00 0px 0px 20px 2px;
+  text-shadow: #ffff00 0px 0px 6px, #ffff00 0px 0px 10px;
+}
+
+.about-card {
+  width:200px;
+  height:300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card-body {
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+}
+
+.about-title {
+  font-family: "Days One", sans-serif;
+  color:yellow !important;
+}
+
+.fa {
+  margin: 10px;
+  color: #ffff00;
+}
+
 /* ================================================== */
 /* #5.6 - Error 404 page ============================ */
 /* ================================================== */
+
+/* 404 page */
+
+.baby-yoda-img {
+margin: -50% 0 0 10%;
+width: 90%;
+height: auto;
 
 .error-container {
   display: flex;
