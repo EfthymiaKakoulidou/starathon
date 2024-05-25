@@ -99,8 +99,12 @@ h2 {
 }
 
 .intro-text {
+  background: rgba(191, 177, 177, 0.128);
   color: #ffd700;
   font-size: 1.25rem;
+  padding: 3px;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
   margin: 25px auto;
 }
 
@@ -418,6 +422,10 @@ nav ul li.yellow:hover {
   animation-delay: 0.5s;
 }
 
+#game-area {
+  color: #ffd700;
+}
+
 .game-start {
   display: flex;
   flex-direction: column;
@@ -503,6 +511,10 @@ nav ul li.yellow:hover {
 
 .about-title {
   font-family: "Days One", sans-serif;
+  background: rgba(191, 177, 177, 0.128);
+  padding: 3px;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
   color:#ffd700;
 }
 
@@ -522,23 +534,51 @@ input#answer3  {
 label {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
-  width: 200px;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem auto;
+  background-color: #313131a6;
+  color: #ffffff;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
   padding: 0.5rem;
+  width: 12rem;
+  height: 2.5rem;
+  font-family: 'Days One', sans-serif;
+  font-size: 1rem;
+  z-index: 1;
+  position: relative;
+  outline: none;
+  overflow: hidden;
   cursor: pointer;
-  border: 1px solid #f1ea10;
-  box-shadow: 0 0 7px 3px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+label::after {
+  content: '';
+  z-index: -1;
+  background-color: #ffffff33;
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transform: translateX(-100%) rotate(35deg);
+  transition: transform 1s ease-in-out;
 }
 
 label:hover {
-  background-color: #ffffff;
-  color: black;
-  box-shadow: 0 0 10px 3px #ffff00;
+    box-shadow: 0 0 9px 2px #ffd700;
+}
+
+label:hover::after {
+  transform: translateX(200%) rotate(35deg);
 }
 
 .countdown {
   display: flex;
-  color: #ffff00;
+  color: #ffd700;
   text-align: center;
   justify-content: center;
   font-size: 30px;
@@ -547,7 +587,7 @@ label:hover {
   margin: 10px auto;
   margin-bottom: 30px;
   background-position: 50%;
-  border: 2px solid #ffff00;
+  border: 2px solid #ffd700;
   border-radius: 50%;
 }
 
@@ -570,24 +610,14 @@ footer {
 
 /* ==== End of Footer Styles ==== */
 
-/* Trivia start button */
-.start-button {
-  color: #fee908 !important;
-}
-
-.start-button:hover {
-  background-color: #fee908 !important;
-  color: black !important;
-}
-
 /* Game Area */
 
 #game-area {
   display: flex;
   flex-direction: column;
   align-content: center;
-  margin: auto;
-  color: #ffff00;
+  margin: 1.5rem auto;
+  color: #ffd700;
 }
 
 /* ================================================== */
@@ -661,7 +691,8 @@ footer {
 }
 
 .modal-content {
-  margin: 15% auto;
+  margin: 4rem auto;
+  text-align: center;
   padding: 20px;
   border: 1px solid #888888;
   width: 80%;
