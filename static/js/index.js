@@ -9,6 +9,9 @@ document.querySelector('#burger').addEventListener('click',(e) => {
 // Game Logic
 
 // Declare the game variables
+let correctAnswer;
+let audio;
+let themeAudio;
 let amountOfQuestions;
 let answersCorrect = 0;
 let timer;
@@ -31,9 +34,9 @@ startGameHard.addEventListener('click', triviaGameHard);
 
 // Game start youngling
 function triviaGameEasy() {
-
+  
     // "I like those odds audio"
-    let audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
 
     setTimeout(function() {
@@ -57,20 +60,28 @@ function triviaGameEasy() {
 
             // Display the first question
             displayNextQuestion();
+
+            // Create a new Audio object
+            themeAudio = new Audio('./static/sounds/cantina-band.mp3');
+            themeAudio.play();
+            
+            // Play the audio every 26 seconds
+            setInterval(function() {
+                themeAudio.currentTime = 0;
+                themeAudio.play();
+            }, 26000); // 26000 milliseconds = 26 seconds
             
         })
         // Handle any errors
         .catch(error => console.error('Error:', error));
-    }, 2400);
-  
-    
+    }, 2400)
 }
 
 // Game start padawan
 function triviaGameMedium() {
   
     // "I like those odds audio"
-    let audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
 
     setTimeout(function() {
@@ -94,6 +105,16 @@ function triviaGameMedium() {
 
             // Display the first question
             displayNextQuestion();
+
+            // Create a new Audio object
+            audio = new Audio('./static/sounds/cantina-band.mp3');
+            audio.play();
+            
+            // Play the audio every 26 seconds
+            setInterval(function() {
+                audio.currentTime = 0;
+                audio.play();
+            }, 26000); // 26000 milliseconds = 26 seconds
             
         })
         // Handle any errors
@@ -105,7 +126,7 @@ function triviaGameMedium() {
 function triviaGameHard() {
   
     // "I like those odds audio"
-    let audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
 
     setTimeout(function() {
@@ -129,6 +150,16 @@ function triviaGameHard() {
 
             // Display the first question
             displayNextQuestion();
+
+            // Create a new Audio object
+            audio = new Audio('./static/sounds/cantina-band.mp3');
+            audio.play();
+            
+            // Play the audio every 26 seconds
+            setInterval(function() {
+                audio.currentTime = 0;
+                audio.play();
+            }, 26000); // 26000 milliseconds = 26 seconds
             
         })
         // Handle any errors
@@ -162,11 +193,6 @@ function shuffleArray(array) {
 // Display the next question
 function displayNextQuestion() {
     startTimer();
-    // Create a new Audio object
-    /* let audio = new Audio('./static/sounds/c3p0-cheer.mp3');
-
-    // Play the audio
-    audio.play(); */
 
     // Get the next item from the shuffled game data iterator
     let nextItem = shuffledGameDataIterator.next();
@@ -177,6 +203,14 @@ function displayNextQuestion() {
     // If there are no more questions, display a message
     if (nextItem.done) {
         stopTimer();
+        themeAudio.pause();
+        themeAudio.currentTime = 0;
+
+        if (answersCorrect >= 3) {
+            audio = new Audio('./static/sounds/vader-force-strong.mp3');
+            audio.play();
+        }
+
         document.getElementById('timer').textContent = null;
         gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions} </h1><h2>No more questions</h2>`;
         return;
@@ -232,6 +266,7 @@ function attachAnswerListeners(shuffledAnswers, nextItem) {
             modal.style.display = "block";
         });
     });
+
 }
 
 // Attach event listener to the next question modal button
@@ -253,7 +288,8 @@ function startTimer() {
 
         if (timeLeft <= 0) {
             clearInterval(timer);
-            displayNextQuestion();
+            modalMessage.textContent = 'Time is up!';
+            modal.style.display = "block";
         }
     }, 1000);
 }
