@@ -212,7 +212,19 @@ function displayNextQuestion() {
         }
 
         document.getElementById('timer').textContent = null;
-        gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions} </h1><h2>No more questions</h2>`;
+        gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions} </h1>
+                              <h2>No more questions</h2>
+                              <div>
+                                  <button id="return-home" href="index.html" type="button" class="game-start" aria-label="button to return to home page">
+                                      Return to Home
+                                  </button>
+                              </div>`
+                              ;
+        let returnHome = document.getElementById('return-home');
+        returnHome.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
         return;
     }
 
