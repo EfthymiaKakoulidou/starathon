@@ -1,0 +1,52 @@
+[
+    {
+      "question": "What is the name of the Wookiee home world?",
+      "answers": [
+        "Kashyyyk",
+        "Endor",
+        "Malastare",
+        "Dantooine"
+      ],
+      "correctAnswer": "Kashyyyk"
+    },
+    {
+      "question": "Who was the Sith Lord that created the Rule of Two?",
+      "answers": [
+        "Darth Sidious",
+        "Darth Plagueis",
+        "Darth Bane",
+        "Darth Revan"
+      ],
+      "correctAnswer": "Darth Bane"
+    },
+    {
+        "question": "In 'The Empire Strikes Back,' what is the name of the bounty hunter who is a member of the same species as Yoda?",
+        "answers": [
+          "Bossk",
+          "Zuckuss",
+          "IG-88",
+          "Dengar"
+        ],
+        "correctAnswer": "Zuckuss"
+      },
+      {
+        "question": "Which actor played Governor Tarkin in 'A New Hope'?",
+        "answers": [
+          "Christopher Lee",
+          "Alec Guinness",
+          "Peter Cushing",
+          "David Prowse"
+        ],
+        "correctAnswer": "Peter Cushing"
+      },
+      {
+        "question": "What was the original title of the first Star Wars movie when it was released in 1977?",
+        "answers": [
+          "Star Wars: A New Hope",
+          "Star Wars: The Adventures of Luke Starkiller",
+          "Star Wars: Episode IV – A New Hope",
+          "Star Wars"
+        ],
+        "correctAnswer": "Star Wars"
+      }
+  ]
