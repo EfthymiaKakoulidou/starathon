@@ -406,6 +406,37 @@ footer {
 
 .about-area {
   display: flex ;
+  justify-content: center;
+}
+
+.about-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: #ffff00 0px 0px 20px 2px;
+  text-shadow: #ffff00 0px 0px 6px, #ffff00 0px 0px 10px;
+}
+
+.about-card {
+  width:150px;
+  height:150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card-body {
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+}
+
+.about-title {
+  font-family: "Days One", sans-serif;
+  color:yellow !important;
+}
+
+.fa {
+  color: #ffff00;
 }
 
 /* 404 page */
