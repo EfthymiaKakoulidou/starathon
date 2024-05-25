@@ -422,8 +422,13 @@ nav ul li.yellow:hover {
   animation-delay: 0.5s;
 }
 
-#game-area {
+#game-area h2,
+.countdown {
+  background: rgba(191, 177, 177, 0.128);
   color: #ffd700;
+  padding: 3px;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
 }
 
 .game-start {
