@@ -8,6 +8,9 @@ document.querySelector('#burger').addEventListener('click',(e) => {
 
 // Game Logic
 
+// Declare the game variables
+let amountOfQuestions;
+let answersCorrect = 0;
 let timer;
 const TIMER_DURATION = 10;
 
@@ -43,6 +46,9 @@ function triviaGameEasy() {
         // Handle the parsed data and create the game
         .then(function(game_data) {
 
+            // Set the amount of questions
+            amountOfQuestions = game_data.length;
+
             // Shuffle the order of the game data
             let shuffledGameData = shuffleArray([...game_data]);
 
@@ -55,7 +61,7 @@ function triviaGameEasy() {
         })
         // Handle any errors
         .catch(error => console.error('Error:', error));
-    }, 2330);
+    }, 2400);
   
     
 }
@@ -77,6 +83,9 @@ function triviaGameMedium() {
         // Handle the parsed data and create the game
         .then(function(game_data) {
 
+            // Set the amount of questions
+            amountOfQuestions = game_data.length;
+
             // Shuffle the order of the game data
             let shuffledGameData = shuffleArray([...game_data]);
 
@@ -89,7 +98,7 @@ function triviaGameMedium() {
         })
         // Handle any errors
         .catch(error => console.error('Error:', error));
-    }, 2330)
+    }, 2400)
 }
 
 // Game start Grand Master
@@ -109,6 +118,9 @@ function triviaGameHard() {
         // Handle the parsed data and create the game
         .then(function(game_data) {
 
+            // Set the amount of questions
+            amountOfQuestions = game_data.length;
+
             // Shuffle the order of the game data
             let shuffledGameData = shuffleArray([...game_data]);
 
@@ -121,7 +133,7 @@ function triviaGameHard() {
         })
         // Handle any errors
         .catch(error => console.error('Error:', error));
-    }, 2330)
+    }, 2400)
 }
 
 // Shuffle an array's elements order
@@ -166,7 +178,7 @@ function displayNextQuestion() {
     if (nextItem.done) {
         stopTimer();
         document.getElementById('timer').textContent = null;
-        gameArea.innerHTML = '<h2>No more questions</h2>';
+        gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions} </h1><h2>No more questions</h2>`;
         return;
     }
 
@@ -212,6 +224,7 @@ function attachAnswerListeners(shuffledAnswers, nextItem) {
 
             // Display the modal with the result of the answer
             if (answer === nextItem.value.correctAnswer) {
+                answersCorrect++;
                 modalMessage.textContent = 'Correct!';
             } else {
                 modalMessage.textContent = 'Incorrect. The correct answer was ' + nextItem.value.correctAnswer;
@@ -228,6 +241,7 @@ nextQuestionModalButton.addEventListener('click', function() {
     displayNextQuestion();
 });
 
+// Start Timer function
 function startTimer() {
     let timeLeft = TIMER_DURATION;
     document.getElementById('timer').classList.add('countdown');
@@ -244,6 +258,7 @@ function startTimer() {
     }, 1000);
 }
 
+// Stop Timer function
 function stopTimer() {
     clearInterval(timer);
     document.getElementById('timer').classList.remove('countdown');
