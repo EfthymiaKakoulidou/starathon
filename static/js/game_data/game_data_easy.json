@@ -1,0 +1,52 @@
+[
+    {
+      "question": "What is the name of Han Solo's ship?",
+      "answers": [
+        "The Star Destroyer",
+        "The Millennium Falcon",
+        "The X-Wing",
+        "The TIE Fighter"
+      ],
+      "correctAnswer": "The Millennium Falcon"
+    },
+    {
+      "question": "Who is Luke Skywalker's father?",
+      "answers": [
+        "Obi-Wan Kenobi",
+        "Yoda",
+        "Darth Vader",
+        "Han Solo"
+      ],
+      "correctAnswer": "Darth Vader"
+    },
+    {
+        "question": "What planet is Princess Leia from?",
+        "answers": [
+          "Tatooine",
+          "Naboo",
+          "Coruscant",
+          "Alderaan"
+        ],
+        "correctAnswer": "Alderaan"
+      },
+      {
+        "question": "Who trained Luke Skywalker in 'The Empire Strikes Back'?",
+        "answers": [
+          "Obi-Wan Kenobi",
+          "Yoda",
+          "Darth Vader",
+          "Qui-Gon Jinn"
+        ],
+        "correctAnswer": "Yoda"
+      },
+      {
+        "question": "What colour is Mace Windu's lightsaber?",
+        "answers": [
+          "Blue",
+          "Green",
+          "Red",
+          "Purple"
+        ],
+        "correctAnswer": "Purple"
+      }
+  ]
