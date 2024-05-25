@@ -1,13 +1,59 @@
+/**
+ *
+ * Index
+ *
+ *  0.0 - Variables
+ *  1.0 - General
+ *  1.1 - Typography
+ *  1.2 - Backgrounds
+ *  2.0 - Layout
+ *  3.0 - Header
+ *  4.0 - Footer
+ *  5.0 - Pages
+ *  5.1 - Home
+ *  5.2 - Jedi
+ *  5.3 - Sith
+ *  5.4 - Quiz
+ *  5.5 - About
+ *  5.6 - Error (404)
+ *  6.0 - Results
+ *  6.1 - Modal
+ *  6.2 - Timer
+ *  6.3 - Key Frames
+ *  6.4 - Alerts
+ *  6.5 - Buttons
+ *  7.0 - Media Queries
+*/
+
+/* Waiting on global styles here */
+
+/* --root color variables etc go here */
+
+/* ================================================== */
+/* #0.0 - Variables ================================= */
+/* ================================================== */
+
 @import url('https://fonts.cdnfonts.com/css/star-wars');
 @import url('https://fonts.cdnfonts.com/css/days-one');
 @import url('https://fonts.cdnfonts.com/css/sf-distant-galaxy');
                 
+/* ================================================== */
+/* #1.0 - General =================================== */
+/* ================================================== */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+/* ==== End of General Styles ==== */
+
+/* ================================================== */
+/* #1.1 - Typography =================================== */
+/* ================================================== */
+
+
 
 body {
   display: flex;
@@ -19,6 +65,24 @@ body {
   position: relative;
 }
 
+/* ================================================== */
+/* #2.0 Layout ====================================== */
+/* ================================================== */
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  display: block;
+  text-align: center;
+}
+
+main {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
 #container {
   width: 3rem;
   height: 3rem;
@@ -27,12 +91,18 @@ body {
   right: 0%;
 }
 
+/* ==== End of Layout Styles ==== */
+
+/* ================================================== */
+/* #3.0 Header ====================================== */
+/* ================================================== */
+
 header {
   width: 100%;
   padding: 1.5rem 1rem;
-  background-color: rgba(33, 33, 33, 0.474);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.571);
-  box-shadow: 0 0 5px 3px rgba(255, 253, 156, 0.526);
+  background-color: #21212179;
+  border-bottom: 1px solid #ffffff92;
+  box-shadow: 0 0 5px 3px #fffd9c86;
   z-index: 3;
 }
 
@@ -40,13 +110,13 @@ header {
   font-family: 'Star Wars', sans-serif;
   top: 1.30svh;
   font-size: 1.2em;
-  color: rgb(255, 255, 255);
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.704);
+  color: #ffffff;
+  text-shadow: 0px 0px 1px #000000b4;
 }
 
 .logo:hover {
-  color: rgb(0, 0, 0);
-  text-shadow: 0px 0px 4px yellow;
+  color: #000000;
+  text-shadow: 0px 0px 4px #ffff00;
 }
 
 .logo a,
@@ -84,7 +154,7 @@ header {
   content: "";
   display: block;
   height: 40%;
-  background: rgb(226, 226, 226);
+  background: #e2e2e2;
   position: absolute;
   top: 50%;
   transform: translate(0%, -45%);
@@ -102,16 +172,16 @@ header {
 }
 
 #burger:hover .bun.top:before {
-  background: #fee;
-  box-shadow: #f00 0px 0px 10px 1px;
+  background: #ffeeee;
+  box-shadow: #ff0000 0px 0px 10px 1px;
 }
 #burger:hover .bun.bottom:before {
-  background: #dff;
-  box-shadow: #0ff 0px 0px 10px 1px;
+  background: #ddffff;
+  box-shadow: #00ffff 0px 0px 10px 1px;
 }
 #burger:hover .filling:before {
-  background: #efe;
-  box-shadow: #0f0 0px 0px 10px 1px;
+  background: #eeffee;
+  box-shadow: #00ff00 0px 0px 10px 1px;
 }
 #burger .bun.top {
   top: 25%;
@@ -163,7 +233,7 @@ header {
 
 nav {
     font-family: 'SF Distant Galaxy', sans-serif;
-    color: white;
+    color: #ffffff;
     background: #111111a1;
     position: absolute;
     right: 0;
@@ -186,8 +256,8 @@ nav.show {
     height: 385px;
     max-width: 100%;
     max-height: 75%;
-    top: 5.2rem;
-    box-shadow: 0 0 20px 2px yellow;
+    top: 5.1rem;
+    box-shadow: 0 0 20px 2px #ffff00;
 }
 
 nav ul {
@@ -216,11 +286,11 @@ nav ul li:hover {
 nav ul li:hover {
   width: 90%;
   padding: 0px 16px 0px 0px;
-  color: black;
+  color: #000000;
 }
 
 .selected {
-  color: yellow
+  color: #ffff00
 }
 
 nav ul li a {
@@ -298,14 +368,7 @@ nav ul li.yellow:hover {
   }
 }
 
-main {
-  flex-grow: 1;
-  overflow: hidden;
-}
-
-h1 {
-  text-align: center;
-}
+/* ==== End of Header Section Styles ==== */
 
 .welcome-hidden {
   display: none;
@@ -335,9 +398,10 @@ h1 {
   align-items: center;
   justify-content: center;
   margin: 0.5rem auto;
-  background-color: rgba(166, 166, 166, 0.215);
+  background-color: #a6a6a637;
   color: #ffffff;
   border: none;
+  border-radius: 5px;
   padding: 0.5rem;
   width: 12rem;
   height: 2.5rem;
@@ -354,7 +418,7 @@ h1 {
 .game-start::after {
   content: '';
   z-index: -1;
-  background-color: hsla(0, 0%, 100%, 0.2);
+  background-color: #ffffff33;
   position: absolute;
   top: -50%;
   bottom: -50%;
@@ -373,34 +437,88 @@ h1 {
   transform: translateX(200%) rotate(35deg);
 }
 
+#game-area div{
+  text-align: center;
+}
+
+input#answer0,
+input#answer1,
+input#answer2,
+input#answer3  {
+  display: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 200px;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #f1ea10;
+  box-shadow: 0 0 7px 3px;
+}
+
+label:hover {
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 0 0 10px 3px #ffff00;
+}
+
+.countdown {
+  display: flex;
+  color: #ffff00;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  margin-bottom: 30px;
+  background-position: 50%;
+  border: 2px solid #ffff00;
+  border-radius: 50%;
+}
+
+/* ================================================== */
+/* #4.0 Footer ====================================== */
+/* ================================================== */
+
 footer {
   width: 100%;
-  font-family: "Days One", sans-serif;
+  font-family: 'Days One', sans-serif;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   padding: 0.5rem 1rem;
-  background-color: rgba(33, 33, 33, 0.686);
-  border-top: 1px solid rgba(255, 255, 255, 0.571);
-  box-shadow: 0 0 5px 3px rgba(255, 253, 156, 0.526);
+  background-color: #212121af;
+  border-top: 1px solid #ffffff92;
+  box-shadow: 0 0 5px 3px #fffd9c86;
   z-index: 3;
   overflow: hidden;
 }
 
+/* ==== End of Footer Styles ==== */
+
 /* Trivia start button */
 .start-button {
-  color: rgb(254, 233, 8) !important;
+  color: #fee908 !important;
 }
 
 .start-button:hover {
-  background-color: rgb(254, 233, 8) !important;
+  background-color: #fee908 !important;
   color: black !important;
 }
 
 /* Game Area */
 
 #game-area {
-  color: yellow ;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: auto;
+  color: #ffff00;
 }
+
 
 /* About Page */
 
@@ -445,6 +563,9 @@ footer {
   color: #ffff00;
 }
 
+/* ================================================== */
+/* #5.6 - Error 404 page ============================ */
+/* ================================================== */
 
 /* 404 page */
 
@@ -452,13 +573,61 @@ footer {
 margin: -50% 0 0 10%;
 width: 90%;
 height: auto;
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .error-img {
-margin: -20% 0 20% 0;
+  margin: 0 auto;
+  max-height: 130px;
 }
-=======
-/* Answer comparison modal */
+
+.error-message {
+  text-align: center;
+  font-family: 'days one', sans-serif;
+  color: #ffff00;
+  font-size: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.error-button {
+  display: block;
+  font-family: 'SF Distant Galaxy', sans-serif;
+  background: #00000086;
+  color: #000000;
+  text-shadow: 0 0 12px #fff700;
+  border: 2px solid #f1ea10;
+  padding: 0.5rem 1rem;
+  margin: 2rem auto 0 auto;
+}
+
+.error-button:hover {
+  background-color: #f1e91090;
+  color: black;
+  text-shadow: 0 0 20px #f5f5f5;
+  border: 2px solid #f5f5f5;
+}
+
+.baby-yoda-img {
+  margin: 4.5rem auto 0 auto;
+  width: 22%;
+  min-width: 80px;
+  min-height: 80px;
+  max-height: 200px;
+}
+
+/* ==== End of Error 404 page styles ==== */
+
+/* ================================================== */
+/* #6.1 - Modal ===================================== */
+/* ================================================== */
+
 
 .modal {
   display: none;
@@ -474,20 +643,37 @@ margin: -20% 0 20% 0;
 .modal-content {
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #888888;
   width: 80%;
 }
 
 .modal-game-start {
-  background-color: black;
+  background-color: #000000;
 }
 
-/* Timer */
-.timer {
-  margin-left: 3rem;
+/* ==== End of Modal styles ==== */
+
+/* ================================================== */
+/* #6.2 - Timer ===================================== */
+/* ================================================== */
+
+.time {
+  /* display: none; */
+  text-align: center;
 }
 
-/* Media Queries */
+#timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==== End of Timer styles ==== */
+
+/* ================================================== */
+/* #7.0 - Media Queries ============================= */
+/* ================================================== */
+
 @media screen and (min-width: 320px) {
 
 }
@@ -507,3 +693,4 @@ margin: -20% 0 20% 0;
 @media screen and (min-width: 1440px) {
 
 }
+/* ==== End of Media Query Styles ==== */

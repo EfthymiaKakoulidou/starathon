@@ -8,39 +8,163 @@ document.querySelector('#burger').addEventListener('click',(e) => {
 
 // Game Logic
 
+// Declare the game variables
+let correctAnswer;
+let audio;
+let themeAudio;
+let amountOfQuestions;
+let answersCorrect = 0;
 let timer;
 const TIMER_DURATION = 10;
 
 // Declare the shuffled game data iterator
 let shuffledGameDataIterator;
 
-// Game start trigger button
-let startGame = document.getElementById('start-game-button');
-startGame.addEventListener('click', triviaGame);
+// Game start trigger button for youngling
+let startGameEasy = document.getElementById('start-game-easy');
+startGameEasy.addEventListener('click', triviaGameEasy);
 
-function triviaGame() {
+// Game start trigger button for padawan
+let startGameMedium = document.getElementById('start-game-medium');
+startGameMedium.addEventListener('click', triviaGameMedium);
 
-    // Fetch the game data
-    fetch('./static/js/game_data/game_data.json')
+// Game start trigger button for Grand Master
+let startGameHard = document.getElementById('start-game-hard');
+startGameHard.addEventListener('click', triviaGameHard);
 
-    // Parse the JSON data
-    .then(response => response.json())
+// Game start youngling
+function triviaGameEasy() {
+  
+    // "I like those odds audio"
+    audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio.play();
 
-    // Handle the parsed data and create the game
-    .then(function(game_data) {
+    setTimeout(function() {
+        // Fetch the game data
+        fetch('./static/js/game_data/game_data_easy.json')
 
-        // Shuffle the order of the game data
-        let shuffledGameData = shuffleArray([...game_data]);
+        // Parse the JSON data
+        .then(response => response.json())
 
-        // Create an iterator for the shuffled game data
-        shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+        // Handle the parsed data and create the game
+        .then(function(game_data) {
 
-        // Display the first question
-        displayNextQuestion();
-        
-    })
-    // Handle any errors
-    .catch(error => console.error('Error:', error));
+            // Set the amount of questions
+            amountOfQuestions = game_data.length;
+
+            // Shuffle the order of the game data
+            let shuffledGameData = shuffleArray([...game_data]);
+
+            // Create an iterator for the shuffled game data
+            shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+
+            // Display the first question
+            displayNextQuestion();
+
+            // Create a new Audio object
+            themeAudio = new Audio('./static/sounds/cantina-band.mp3');
+            themeAudio.play();
+            
+            // Play the audio every 26 seconds
+            setInterval(function() {
+                themeAudio.currentTime = 0;
+                themeAudio.play();
+            }, 26000); // 26000 milliseconds = 26 seconds
+            
+        })
+        // Handle any errors
+        .catch(error => console.error('Error:', error));
+    }, 2400)
+}
+
+// Game start padawan
+function triviaGameMedium() {
+  
+    // "I like those odds audio"
+    audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio.play();
+
+    setTimeout(function() {
+        // Fetch the game data
+        fetch('./static/js/game_data/game_data_medium.json')
+
+        // Parse the JSON data
+        .then(response => response.json())
+
+        // Handle the parsed data and create the game
+        .then(function(game_data) {
+
+            // Set the amount of questions
+            amountOfQuestions = game_data.length;
+
+            // Shuffle the order of the game data
+            let shuffledGameData = shuffleArray([...game_data]);
+
+            // Create an iterator for the shuffled game data
+            shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+
+            // Display the first question
+            displayNextQuestion();
+
+            // Create a new Audio object
+            audio = new Audio('./static/sounds/cantina-band.mp3');
+            audio.play();
+            
+            // Play the audio every 26 seconds
+            setInterval(function() {
+                audio.currentTime = 0;
+                audio.play();
+            }, 26000); // 26000 milliseconds = 26 seconds
+            
+        })
+        // Handle any errors
+        .catch(error => console.error('Error:', error));
+    }, 2400)
+}
+
+// Game start Grand Master
+function triviaGameHard() {
+  
+    // "I like those odds audio"
+    audio = new Audio('./static/sounds/the-mandalorian.mp3');
+    audio.play();
+
+    setTimeout(function() {
+        // Fetch the game data
+        fetch('./static/js/game_data/game_data_hard.json')
+
+        // Parse the JSON data
+        .then(response => response.json())
+
+        // Handle the parsed data and create the game
+        .then(function(game_data) {
+
+            // Set the amount of questions
+            amountOfQuestions = game_data.length;
+
+            // Shuffle the order of the game data
+            let shuffledGameData = shuffleArray([...game_data]);
+
+            // Create an iterator for the shuffled game data
+            shuffledGameDataIterator = shuffledGameData[Symbol.iterator]();
+
+            // Display the first question
+            displayNextQuestion();
+
+            // Create a new Audio object
+            audio = new Audio('./static/sounds/cantina-band.mp3');
+            audio.play();
+            
+            // Play the audio every 26 seconds
+            setInterval(function() {
+                audio.currentTime = 0;
+                audio.play();
+            }, 26000); // 26000 milliseconds = 26 seconds
+            
+        })
+        // Handle any errors
+        .catch(error => console.error('Error:', error));
+    }, 2400)
 }
 
 // Shuffle an array's elements order
@@ -69,11 +193,6 @@ function shuffleArray(array) {
 // Display the next question
 function displayNextQuestion() {
     startTimer();
-    // Create a new Audio object
-    let audio = new Audio('./static/sounds/c3p0-cheer.mp3');
-
-    // Play the audio
-    audio.play();
 
     // Get the next item from the shuffled game data iterator
     let nextItem = shuffledGameDataIterator.next();
@@ -84,8 +203,16 @@ function displayNextQuestion() {
     // If there are no more questions, display a message
     if (nextItem.done) {
         stopTimer();
+        themeAudio.pause();
+        themeAudio.currentTime = 0;
+
+        if (answersCorrect >= 3) {
+            audio = new Audio('./static/sounds/vader-force-strong.mp3');
+            audio.play();
+        }
+
         document.getElementById('timer').textContent = null;
-        gameArea.innerHTML = '<h2>No more questions</h2>';
+        gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions} </h1><h2>No more questions</h2>`;
         return;
     }
 
@@ -131,6 +258,7 @@ function attachAnswerListeners(shuffledAnswers, nextItem) {
 
             // Display the modal with the result of the answer
             if (answer === nextItem.value.correctAnswer) {
+                answersCorrect++;
                 modalMessage.textContent = 'Correct!';
             } else {
                 modalMessage.textContent = 'Incorrect. The correct answer was ' + nextItem.value.correctAnswer;
@@ -138,6 +266,7 @@ function attachAnswerListeners(shuffledAnswers, nextItem) {
             modal.style.display = "block";
         });
     });
+
 }
 
 // Attach event listener to the next question modal button
@@ -147,8 +276,10 @@ nextQuestionModalButton.addEventListener('click', function() {
     displayNextQuestion();
 });
 
+// Start Timer function
 function startTimer() {
     let timeLeft = TIMER_DURATION;
+    document.getElementById('timer').classList.add('countdown');
     document.getElementById('timer').textContent = timeLeft;
 
     timer = setInterval(() => {
@@ -157,11 +288,14 @@ function startTimer() {
 
         if (timeLeft <= 0) {
             clearInterval(timer);
-            displayNextQuestion();
+            modalMessage.textContent = 'Time is up!';
+            modal.style.display = "block";
         }
     }, 1000);
 }
 
+// Stop Timer function
 function stopTimer() {
     clearInterval(timer);
+    document.getElementById('timer').classList.remove('countdown');
 }
