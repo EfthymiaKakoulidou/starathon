@@ -103,15 +103,48 @@ function triviaGameEasy() {
             // Display the first question
             displayNextQuestion();
 
+            // Get the sound-control element
+            let soundControl = document.getElementById('sound-control');
+
+            // Insert HTML into the sound-control element
+            soundControl.innerHTML = `
+                <i class="fa-solid fa-volume-high icon-white sound-on"></i>
+                <i class="fa-solid fa-volume-xmark icon-white sound-off"></i>
+            `;
+
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
             themeAudio.play();
-            
+
+            // Store the interval ID
+            let intervalId;
+
             // Play the audio every 26 seconds
-            setInterval(function() {
+            intervalId = setInterval(function() {
                 themeAudio.currentTime = 0;
                 themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
+
+            // Get the sound-off and sound-on buttons
+            let soundOffButton = document.querySelector('.sound-off');
+            let soundOnButton = document.querySelector('.sound-on');
+
+            // Add event listener to the sound-off button
+            soundOffButton.addEventListener('click', function() {
+                // Pause the audio and clear the interval
+                themeAudio.pause();
+                clearInterval(intervalId);
+            });
+
+            // Add event listener to the sound-on button
+            soundOnButton.addEventListener('click', function() {
+                // Play the audio and set the interval
+                themeAudio.play();
+                intervalId = setInterval(function() {
+                    themeAudio.currentTime = 0;
+                    themeAudio.play();
+                }, 26000);
+            });
             
         })
         // Handle any errors
@@ -151,15 +184,48 @@ function triviaGameMedium() {
             // Display the first question
             displayNextQuestion();
 
+            // Get the sound-control element
+            let soundControl = document.getElementById('sound-control');
+
+            // Insert HTML into the sound-control element
+            soundControl.innerHTML = `
+                <i class="fa-solid fa-volume-high icon-white sound-on"></i>
+                <i class="fa-solid fa-volume-xmark icon-white sound-off"></i>
+            `;
+
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
             themeAudio.play();
-            
+
+            // Store the interval ID
+            let intervalId;
+
             // Play the audio every 26 seconds
-            setInterval(function() {
+            intervalId = setInterval(function() {
                 themeAudio.currentTime = 0;
                 themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
+
+            // Get the sound-off and sound-on buttons
+            let soundOffButton = document.querySelector('.sound-off');
+            let soundOnButton = document.querySelector('.sound-on');
+
+            // Add event listener to the sound-off button
+            soundOffButton.addEventListener('click', function() {
+                // Pause the audio and clear the interval
+                themeAudio.pause();
+                clearInterval(intervalId);
+            });
+
+            // Add event listener to the sound-on button
+            soundOnButton.addEventListener('click', function() {
+                // Play the audio and set the interval
+                themeAudio.play();
+                intervalId = setInterval(function() {
+                    themeAudio.currentTime = 0;
+                    themeAudio.play();
+                }, 26000);
+            });
             
         })
         // Handle any errors
@@ -199,15 +265,48 @@ function triviaGameHard() {
             // Display the first question
             displayNextQuestion();
 
+            // Get the sound-control element
+            let soundControl = document.getElementById('sound-control');
+
+            // Insert HTML into the sound-control element
+            soundControl.innerHTML = `
+                <i class="fa-solid fa-volume-high icon-white sound-on"></i>
+                <i class="fa-solid fa-volume-xmark icon-white sound-off"></i>
+            `;
+
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
             themeAudio.play();
-            
+
+            // Store the interval ID
+            let intervalId;
+
             // Play the audio every 26 seconds
-            setInterval(function() {
+            intervalId = setInterval(function() {
                 themeAudio.currentTime = 0;
                 themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
+
+            // Get the sound-off and sound-on buttons
+            let soundOffButton = document.querySelector('.sound-off');
+            let soundOnButton = document.querySelector('.sound-on');
+
+            // Add event listener to the sound-off button
+            soundOffButton.addEventListener('click', function() {
+                // Pause the audio and clear the interval
+                themeAudio.pause();
+                clearInterval(intervalId);
+            });
+
+            // Add event listener to the sound-on button
+            soundOnButton.addEventListener('click', function() {
+                // Play the audio and set the interval
+                themeAudio.play();
+                intervalId = setInterval(function() {
+                    themeAudio.currentTime = 0;
+                    themeAudio.play();
+                }, 26000);
+            });
             
         })
         // Handle any errors
