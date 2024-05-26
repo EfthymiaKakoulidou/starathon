@@ -55,12 +55,12 @@ We used Lighthouse within the Chrome Developer Tools to test the performance, ac
 | :--- | :--- |
 | As a first-time visitor, I want to take part in a Star Wars quiz so I can test my knowledge about Star Wars. | The quiz questions offer a varied range of questions divided in different levels of difficulty|
 | As a first-time visitor, I want to play the quiz in different devices so that I can use all my devices at my convenience. | The game is fully responsive and can be played in any screen size |
-| As a first-time visitor, I want to navigate easily the site so that I can understand quickly the game mechanics. | The game is easy to understand and further instructions are provided in how to play |
+| As a first-time visitor, I want to navigate easily the site so that I can understand quickly the game mechanics. | The game is easy to understand and further instructions are provided in the welcome page |
 
 `Returning Visitors`
 | Goals | How are they achieved? |
 | :--- | :--- |
-| As a returning visitor, I want to select the level of difficulty so that I can play in different modes and test further my knowledge | There is a feature which enables the user to select this once hitting play |
+| As a returning visitor, I want to select the level of difficulty so that I can play in different modes and test further my knowledge | There is a feature which enables the user to select this in the home page |
 
 `Frequent Visitors`
 | Goals | How are they achieved? |
@@ -94,46 +94,37 @@ Each device tested the site using the following browsers:
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | How to play modal | The modal open and closes correctly| Click on how to play, click on close | The content is shown and hidden as expected | Pass |
-| Play | The play button directs the user to the game select page | Click on the play button | The game select page loads | Pass |
+| Play | The play button directs the user to the game select page | Click on any difficulty level | The questions load correctly | Pass |
 
 `Game select page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Easy Quiz | The easy button directs the user to the easy quiz, questions from this category, easy are loaded | Click on the easy button | The easy quiz page loads pulling easy questions | Pass |
-| Medium Quiz | The medium button directs the user to the easy quiz, questions from this category, medium are loaded | Click on the medium button | The medium quiz page loads pulling medium questions | Pass |
-| Hard Quiz | The hard button directs the user to the hard quiz, questions from the category, hard are loaded correctly | Click on the hard button | The hard quiz page loads correctly | Pass |
+| Youngling -Easy Quiz | The easy button directs the user to the easy quiz, questions from this category, easy are loaded | Click on the easy button | The easy quiz page loads pulling easy questions | Pass |
+| Padawan - Medium Quiz | The medium button directs the user to the easy quiz, questions from this category, medium are loaded | Click on the medium button | The medium quiz page loads pulling medium questions | Pass |
+| Grand Master - Hard Quiz | The hard button directs the user to the hard quiz, questions from the category, hard are loaded correctly | Click on the hard button | The hard quiz page loads correctly | Pass |
 
 `Game pages`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Stopwatch | A stopwatch shows while the questions are being populated | Click on any question | The stopwatch shows while answering the questions | Pass |
 | Next Question button |Next question button is working when clicking on it and goes to the next one| Click on any question, answer it| The questions are moving to the next one | Pass |
-| Start sound\stop |A button should allow to turn on and off the audio | Click on turn on or off the audio button | The button should allow the user to have any of those choices| Fail |
+| Start sound\stop |A button should allow to turn on and off the audio | Click on turn on or off the audio button | The button should allow the user to have any of those choices| Pass |
 
 `End page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Back home | The back home button redirect to the main page| Play any game and reach the end page | The correct page is loaded when the go back button is clicked | Pass |
+| Back home | The back home button redirect to the main page| Play any game and reach the end page | The correct page is loaded when the go back button is clicked | Fail |
 
 
 `404 page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Error page | The page shows when there is an issue | Break the game | The 404 page shows | Pass |
-| Back home page | The page redirects the user to the home page once triggered | Click on the go back home button at the 404 page | The user is redirected to the home page with no issues | Fail |
+| Back home page | The page redirects the user to the home page once triggered | Click on the go back home button at the 404 page | The user is redirected to the home page with no issues | Pass |
 
 ---
 
 ## BUG TRACKER
-
-### Solved Bugs
-
-| ID  | CLASS | FEATURE          | DESCRIPTION                                                                          | STEPS TO REPRODUCE                                                                                                                                                           | ACTUAL RESULT                                                                                                                                  | EXPECTED RESULT                                                            | ACTION                                                                                                        | STATUS |
-| --- | ----- | ---------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------ |
-| 1   | A     | abc          | abc            | Steps                                                               | abc      | abc                        | Solution: abc                                                         |  FIXED or NOT FIXED |
-
-### Known Bugs
-
-Add here known bugs if any.
+The bugs are getting tracked on Github pages and assigned to the developer(s) in charge of fixing them
 
 ---
