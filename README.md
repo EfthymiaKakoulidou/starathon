@@ -1,6 +1,6 @@
 # SUBMISSION
 ## Deployment
-#### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
+
 The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
 
 ![GitHub Issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/starathon?style=flat)
@@ -92,7 +92,7 @@ Image titles created at [flaming text](https://eu1.flamingtext.com).
 
 | Member | Role |  
 |--|--|
-| [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/About page |
+| [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/Results Page/About page |
 | [João Rodrigues](https://github.com/Joao4569) | Quiz Button Functionality/Content |
 | [Gemma Butcher](https://github.com/GemmaButcher-dev) | Design/Content |
 | [María Ángeles](https://github.com/Zest-studi-o) | 404 Page/Testing |
