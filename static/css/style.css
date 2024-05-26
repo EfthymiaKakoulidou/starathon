@@ -632,7 +632,7 @@ footer {
 
 
 /* ================================================== */
-/* #5.6 - Error 404 page ============================ */
+/* #5.6 - Error 404 and 505 page ============================ */
 /* ================================================== */
 
 .error-container {
@@ -663,6 +663,13 @@ footer {
   font-size: 1rem;
   margin: 0 auto;
 }
+.p1{
+  font-size: 3rem;
+  color: #fff700;
+  /* background-image: linear-gradient(180deg, #ffd700, #bfb1b1); */
+  padding: 30px 0;
+}
+/* background-image: linear-gradient(0deg, red, yellow); */
 
 .error-button {
   text-align: center;
@@ -690,6 +697,13 @@ footer {
   margin: 4.5rem auto 0 auto;
   width: 22%;
   min-width: 80px;
+  min-height: 80px;
+  max-height: 200px;
+}
+.darth-vader-img {
+  margin: 4.5rem auto 0 auto;
+  width: 14%;
+  min-width: 40px;
   min-height: 80px;
   max-height: 200px;
 }
