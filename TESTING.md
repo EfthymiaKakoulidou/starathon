@@ -13,8 +13,8 @@
   *  [Known Bugs](#known-Bugs)
 
 - - -
-
-User stories were created to aid developing a test plan, the test plan includes passing validator and manual testing using different operative systems and screen sizes, the plan ensures that the user stories are met and our product is delivered to them taking their needs into consideration
+![Project Image](docs/testing/aim-responsive.png)
+User stories were created to aid developing a test plan, the test plan includes passing validator and manual testing using different operative systems and screen sizes, the plan ensures that the user stories are met and our product is delivered to them taking their needs into consideration.
 
 ## AUTOMATED TESTING
 
@@ -30,12 +30,12 @@ Fixed.<br>
 ![css](docs/testing/css.png)
 
 #### HTML
-All pages passed the html validator returning no issues
+All pages passed the html validator returning no issues.
 ![html](docs/testing/html.png)
 
 ### WAVE
 Each page was run through the Web Accessibility Evaluation Tool (WAVE).<br>
-Different shades of yellow where used until the colour contrast passed the validator, a grey box background was added so it could be better visible<br>
+Different shades of yellow where used until the colour contrast passed the validator, a grey box background was added so it could be better visible.<br>
 ![wave](docs/testing/wave.png)
 
 ### JavaScript Validator - Jshint
