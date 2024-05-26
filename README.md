@@ -22,7 +22,7 @@ In this section, we will briefly discuss how our team addressed the applicable c
 # ABOUT SUBMISSION
 
 ## Intro
-This Starathon is a fun interactive front-end web application presented in a quiz/trivia format. The quiz/trivia format consists of randomly selected questions based on the Star Wars franchise, in 3 difficulty levels end Users can test their Star Wars knowledge. Youngling is the easy mode, Padawan is intermediate and well Grand Master speaks for itself!
+The Test Of The Force is a fun interactive front-end web application presented in a quiz/trivia format. The quiz/trivia format consists of randomly selected questions based on the Star Wars franchise, in 3 difficulty levels end Users can test their Star Wars knowledge. Youngling is the easy mode, Padawan is intermediate and well Grand Master speaks for itself!
 
 Have fun you shall, little Padawan.....
 
@@ -81,7 +81,7 @@ Project goals:
 ---
 
 ## Tech
-The Starathon team made use of vanilla HTML3, CSS5 and JavaScript to bring our vision to life.
+The Test Of The Force team made use of vanilla HTML3, CSS5 and JavaScript to bring our vision to life.
 
 ## Testing
 Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
