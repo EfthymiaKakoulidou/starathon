@@ -1,7 +1,7 @@
 # SUBMISSION
 ## Deployment
-#### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
-The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
+
+The project is deployed and can be accessed at [Starathon](https://efthymiakakoulidou.github.io/starathon/index.html).
 
 ![GitHub Issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/starathon?style=flat)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/EfthymiaKakoulidou/starathon/main?style=flat)
@@ -20,8 +20,11 @@ In this section, we will briefly discuss how our team addressed the applicable c
 -  Emphasizing collaborative effort, active participation of each team member, inclusive practices, and the quality of code produced
 
 # ABOUT SUBMISSION
+
 ## Intro
-This Star Wars quiz is a fun interactive front-end web application presented in a quiz format. The quiz format is randomly selected questions based on the Star Wars franchise. End Users can test their Star Wars knowledge in different difficulty levels.
+This Starathon is a fun interactive front-end web application presented in a quiz/trivia format. The quiz/trivia format consists of randomly selected questions based on the Star Wars franchise, in 3 difficulty levels end Users can test their Star Wars knowledge. Youngling is the easy mode, Padawan is intermediate and well Grand Master speaks for itself!
+
+Have fun you shall, little Padawan.....
 
 ## Goal
 The goal section provides a concise summary of the main objective or purpose of the project or software described in this README. It addresses the following aspects:
@@ -78,7 +81,7 @@ Project goals:
 ---
 
 ## Tech
-In the tech section, we provide information about the technology stack, dependencies, and any technical details related to the project.
+The Starathon team made use of vanilla HTML3, CSS5 and JavaScript to bring our vision to life.
 
 ## Testing
 Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
@@ -87,13 +90,14 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 In the credits section, we provide information about the sources used
 Fonts imported from [cdn fonts](https://www.cdnfonts.com).
 Image titles created at [flaming text](https://eu1.flamingtext.com).
+All sounds and sound effect sourced from [Myinstants Star Wars Sound Board](https://www.myinstants.com/en/search/?name=star%20wars).
 
 ## The Starathon Team and contributors
 
 | Member | Role |  
 |--|--|
-| [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/About page |
-| [João Rodrigues](https://github.com/Joao4569) | Quiz Button Functionality/Content |
+| [Efthymia Kakoulidou](https://github.com/EfthymiaKakoulidou) | Scrum Master/Results Page/About page |
+| [João Rodrigues](https://github.com/Joao4569) | Javascript Developer/Interactivity/Game Logic |
 | [Gemma Butcher](https://github.com/GemmaButcher-dev) | Design/Content |
 | [María Ángeles](https://github.com/Zest-studi-o) | 404 Page/Testing |
 | [Vernell C](https://github.com/VCGithubCode) | Frontend Navbar Logic Functionality/Styling/Content/Design |

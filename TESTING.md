@@ -30,22 +30,17 @@ User stories were created to aid developing a test plan, the test plan includes 
 
 ### WAVE
 Each page was run through the Web Accessibility Evaluation Tool (WAVE).<br>
+Different shades of yellow where used until the colour contrast passed the validator, a grey box background was added so it could be better visible<br>
 ![wave](docs/testing/wave.png)
 
 ### JavaScript Validator 
-
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
 
 ### Lighthouse
 
 We used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
-
-#### Desktop Results
-
-
-#### Mobile Results
-
+![lighthouse](docs/testing/home-lighthouse.png)
 
 ---
 
@@ -104,27 +99,28 @@ Each device tested the site using the following browsers:
 `Game select page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Easy Quiz | The easy button directs the user to the easy quiz, questions from this category, easy are loaded from the API | Click on the easy button | The easy quiz page loads pulling easy questions from the API | Pass |
-| Medium Quiz | The medium button directs the user to the easy quiz, questions from this category, medium are loaded from the API | Click on the medium button | The medium quiz page loads pulling medium questions from the API | Pass |
+| Easy Quiz | The easy button directs the user to the easy quiz, questions from this category, easy are loaded | Click on the easy button | The easy quiz page loads pulling easy questions | Pass |
+| Medium Quiz | The medium button directs the user to the easy quiz, questions from this category, medium are loaded | Click on the medium button | The medium quiz page loads pulling medium questions | Pass |
 | Hard Quiz | The hard button directs the user to the hard quiz, questions from the category, hard are loaded correctly | Click on the hard button | The hard quiz page loads correctly | Pass |
 
 `Game pages`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Stopwatch | A stopwatch shows while the questions are being populated | Click on any question | The stopwatch shows while answering the questions | Pass |
-| Colour user feedback | The selected question takes the colour green if it is correct or red if it is incorrect | Play any game | The questions colours display correctly | Pass |
+| Next Question button |Next question button is working when clicking on it and goes to the next one| Click on any question, answer it| The questions are moving to the next one | Pass |
+| Start sound\stop |A button should allow to turn on and off the audio | Click on turn on or off the audio button | The button should allow the user to have any of those choices| Fail |
 
 `End page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Game score | The score obtained in the game displays on top | Play any game and reach the end page | The correct score displays | Pass |
+| Back home | The back home button redirect to the main page| Play any game and reach the end page | The correct page is loaded when the go back button is clicked | Pass |
 
 
 `404 page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Error page | The page shows when there is an issue | Break the game | The 404 page shows | Pass |
-| Back home page | The page redirects the user to the home page once triggered | Click on the go back home button at the 404 page | The user is redirected to the home page with no issues | Pass |
+| Back home page | The page redirects the user to the home page once triggered | Click on the go back home button at the 404 page | The user is redirected to the home page with no issues | Fail |
 
 ---
 

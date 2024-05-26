@@ -74,7 +74,6 @@
 /* ================================================== */
 
 
-
 body {
   display: flex;
   flex-direction: column;
@@ -91,6 +90,10 @@ body {
 
 h1 {
   text-align: center;
+  background: #bfb1b121;
+  padding: 3px;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
 }
 
 h2 {
@@ -99,7 +102,7 @@ h2 {
 }
 
 .intro-text {
-  background: rgba(191, 177, 177, 0.128);
+  background: #bfb1b121;
   color: #ffd700;
   font-size: 1.25rem;
   padding: 3px;
@@ -400,6 +403,8 @@ nav ul li.yellow:hover {
 
 /* ==== End of Header Section Styles ==== */
 
+/* Home and Quiz Section Styles */
+
 .welcome-hidden {
   display: none;
 }
@@ -422,9 +427,19 @@ nav ul li.yellow:hover {
   animation-delay: 0.5s;
 }
 
+/* Game Area */
+
+#game-area {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 1.5rem auto;
+  color: #ffd700;
+}
+
 #game-area h2,
 .countdown {
-  background: rgba(191, 177, 177, 0.128);
+  background: #bfb1b121;
   color: #ffd700;
   padding: 3px;
   border: 1px solid #ffd700;
@@ -437,7 +452,7 @@ nav ul li.yellow:hover {
   align-items: center;
   justify-content: center;
   margin: 0.5rem auto;
-  background-color: #a6a6a637;
+  background: #bfb1b121;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -476,9 +491,77 @@ nav ul li.yellow:hover {
   transform: translateX(200%) rotate(35deg);
 }
 
-
 #game-area div{
   text-align: center;
+}
+
+input#answer0,
+input#answer1,
+input#answer2,
+input#answer3  {
+  display: none;
+}
+
+label, #return-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem auto;
+  background-color: #313131a6;
+  color: #ffffff;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 12rem;
+  font-family: 'Days One', sans-serif;
+  font-size: 1rem;
+  z-index: 1;
+  position: relative;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+label::after,
+#return-home {
+  content: '';
+  z-index: -1;
+  background-color: #ffffff33;
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transform: translateX(-100%) rotate(35deg);
+  transition: transform 1s ease-in-out;
+}
+
+label:hover,
+#return-home:hover {
+    box-shadow: 0 0 9px 2px #ffd700;
+}
+
+label:hover::after,
+#return-home:hover::after {
+  transform: translateX(200%) rotate(35deg);
+}
+
+.countdown {
+  display: flex;
+  color: #ffd700;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  margin-bottom: 30px;
+  background-position: 50%;
+  border: 2px solid #ffd700;
+  border-radius: 50%;
 }
 
 /* About Page */
@@ -528,74 +611,6 @@ nav ul li.yellow:hover {
   color: #ffd700;
 }
 
-
-input#answer0,
-input#answer1,
-input#answer2,
-input#answer3  {
-  display: none;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0.5rem auto;
-  background-color: #313131a6;
-  color: #ffffff;
-  border: 1px solid #ffd700;
-  border-radius: 5px;
-  padding: 0.5rem;
-  width: 12rem;
-  height: 2.5rem;
-  font-family: 'Days One', sans-serif;
-  font-size: 1rem;
-  z-index: 1;
-  position: relative;
-  outline: none;
-  overflow: hidden;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-label::after {
-  content: '';
-  z-index: -1;
-  background-color: #ffffff33;
-  position: absolute;
-  top: -50%;
-  bottom: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  transform: translateX(-100%) rotate(35deg);
-  transition: transform 1s ease-in-out;
-}
-
-label:hover {
-    box-shadow: 0 0 9px 2px #ffd700;
-}
-
-label:hover::after {
-  transform: translateX(200%) rotate(35deg);
-}
-
-.countdown {
-  display: flex;
-  color: #ffd700;
-  text-align: center;
-  justify-content: center;
-  font-size: 30px;
-  width: 80px;
-  height: 80px;
-  margin: 10px auto;
-  margin-bottom: 30px;
-  background-position: 50%;
-  border: 2px solid #ffd700;
-  border-radius: 50%;
-}
-
 /* ================================================== */
 /* #4.0 Footer ====================================== */
 /* ================================================== */
@@ -615,15 +630,6 @@ footer {
 
 /* ==== End of Footer Styles ==== */
 
-/* Game Area */
-
-#game-area {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  margin: 1.5rem auto;
-  color: #ffd700;
-}
 
 /* ================================================== */
 /* #5.6 - Error 404 page ============================ */
@@ -636,37 +642,48 @@ footer {
   overflow: hidden;
 }
 
+.error-title {
+  display: none;
+}
+
 .error-img {
   margin: 0 auto;
-  max-height: 130px;
+  height: 10rem;
 }
 
 .error-message {
   text-align: center;
   font-family: 'days one', sans-serif;
-  color: #ffff00;
+  background: #bfb1b121;
+  color: #ffd700;
+  padding: 0.5rem 2rem;
+  max-width: 300px;
+  border: 1px solid #ffd700;
+  border-radius: 3px;
   font-size: 1rem;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 
 .error-button {
-  display: block;
+  text-align: center;
   font-family: 'SF Distant Galaxy', sans-serif;
-  background: #00000086;
-  color: #000000;
-  text-shadow: 0 0 12px #fff700;
-  border: 2px solid #f1ea10;
-  padding: 0.5rem 1rem;
+  font-size: 1.5em;
+  background: #bfb1b121;
+  color: #ffd700;
+  text-shadow: 0 0 1px white;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
   margin: 2rem auto 0 auto;
+  text-decoration: none;
 }
 
 .error-button:hover {
-  background-color: #f1e91090;
+  background-color: #ffd700;
   color: black;
   text-shadow: 0 0 20px #f5f5f5;
   border: 2px solid #f5f5f5;
+  box-shadow: 0 0 10px 3px #f5f5f5;
 }
 
 .baby-yoda-img {
@@ -683,21 +700,28 @@ footer {
 /* #6.1 - Modal ===================================== */
 /* ================================================== */
 
+.result-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+}
 
 .modal {
   display: none;
   position: fixed;
   z-index: 1;
   left: 0;
-  top: 0;
   width: 50%;
   height: 100%;
-  overflow: auto;
 }
 
 .modal-content {
-  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-self: center;
+  top: 25%;
   padding: 20px;
   border: 1px solid #888888;
   width: 80%;
@@ -714,7 +738,6 @@ footer {
 /* ================================================== */
 
 .time {
-  /* display: none; */
   text-align: center;
 }
 
@@ -750,13 +773,50 @@ footer {
 
 @media screen and (min-width: 320px) {
 
+/* ================================================== */
+/* #7.X - Error 404 page 320px Media Query=========== */
+/* ================================================== */
+
+.error-img {
+  margin: 0 auto;
+  height: 15 rem;
+}
+/* === End of Error 404 (320px) Media Query style === */
+
 }
 
 @media screen and (min-width: 425px) {
 
+
+/* ================================================== */
+/* #7.X - Error 404 page 425px Media Query=========== */
+/* ================================================== */
+
+.error-img {
+  margin: 0 auto;
+  max-height: 400px;
+}
+
+/* === End of Error 404 (425px) Media Query style === */
+
 }
 
 @media screen and (min-width: 768px) {
+
+/* ================================================== */
+/* #7.X - Error 404 page 768px Media Query=========== */
+/* ================================================== */
+
+.baby-yoda-img {
+  margin-top: 6.5rem auto 0 auto;
+  width: 22%;
+  min-width: 80px;
+  min-height: 80px;
+  max-height: 200px;
+  max-width: 200px;
+}
+
+/* === End of Error 404 (768px) Media Query style === */
 
 }
 

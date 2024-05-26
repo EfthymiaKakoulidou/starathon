@@ -78,6 +78,9 @@ function triviaGameEasy() {
     audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
 
+    // Disable the startGameEasy button
+    startGameEasy.disabled = true;
+
     setTimeout(function() {
         // Fetch the game data
         fetch('./static/js/game_data/game_data_easy.json')
@@ -123,6 +126,9 @@ function triviaGameMedium() {
     audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
 
+    // Disable the startGameMedium button
+    startGameMedium.disabled = true;
+
     setTimeout(function() {
         // Fetch the game data
         fetch('./static/js/game_data/game_data_medium.json')
@@ -167,6 +173,9 @@ function triviaGameHard() {
     // "I like those odds audio"
     audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
+
+    // Disable the startGameHard button
+    startGameHard.disabled = true;
 
     setTimeout(function() {
         // Fetch the game data
@@ -244,31 +253,39 @@ function displayNextQuestion() {
         stopTimer();
         themeAudio.pause();
         themeAudio.currentTime = 0;
-
+    
+        let message;
+        let imageSrc;
+    
         if (answersCorrect >= 3) {
             audio = new Audio('./static/sounds/vader-force-strong.mp3');
             audio.play();
+            imageSrc = './static/images/success.jpg'; 
+        } else {
+            audio = new Audio('');
+            audio.play();
+            imageSrc = './static/images/failure.png'; 
         }
-
+    
         document.getElementById('timer').textContent = null;
-        gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions} </h1>
+        gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions}</h1>
                               <h2>No more questions</h2>
+                              <img src="${imageSrc}" alt="result image" class="result-image">
                               <div>
-                                  <button id="return-home" href="index.html" type="button" class="game-start" aria-label="button to return to home page">
+                                  <button id="return-home" type="button" class="game-start" aria-label="button to return to home page">
                                       Return to Home
                                   </button>
-                              </div>`
-                              ;
-        let returnHome = document.getElementById('return-home');
-        returnHome.addEventListener('click', function() {
-            audio = new Audio('./static/sounds/roger-roger-sound.mp3');
-            audio.play();
-            setTimeout(function() {
-                window.location.href = 'index.html';
-            }, 1900);
-            
+                              </div>`;
+    
+                              let returnHome = document.getElementById('return-home');
+                              returnHome.addEventListener('click', function() {
+                                  audio = new Audio('./static/sounds/roger-roger-sound.mp3');
+                                  audio.play();
+                                  setTimeout(function() {
+                                      window.location.href = 'index.html';
+                                  }, 1900);
         });
-
+    
         return;
     }
 
