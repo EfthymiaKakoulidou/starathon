@@ -493,7 +493,7 @@ function displayNextQuestion() {
         gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions}</h1>
                               <h2>No more questions</h2>
                               <img src="${imageSrc}" alt="result image" class="result-image">
-                              <div>
+                              <div class='button-container'>
                                   <button id="return-home" type="button" class="game-start" aria-label="button to return to home page">
                                       Return to Home
                                   </button>
