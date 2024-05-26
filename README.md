@@ -1,6 +1,7 @@
 # SUBMISSION
 ## Deployment
 
+![Project Image](docs/testing/aim-responsive.png)
 The project is deployed and can be accessed at [Starathon](https://efthymiakakoulidou.github.io/starathon/index.html).
 
 ![GitHub Issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/starathon?style=flat)
@@ -15,7 +16,7 @@ In this section, we will briefly discuss how our team addressed the applicable c
 -  Creative use of CSS frameworks (Bulma, Materialize, Bootstrap) to create an engaging and user-friendly design
 -  Well-executed project with effective planning using GitHub Projects and a detailed README.md
 -  Strong alignment with the Hackathon theme and innovative ideas
--  Project demonstrates responsiveness, accessibility, and thorough testing
+-  The project demonstrates responsiveness, accessibility, and thorough testing
 -  Innovative features or functionalities beyond standard requirements
 -  Emphasizing collaborative effort, active participation of each team member, inclusive practices, and the quality of code produced
 
@@ -27,15 +28,21 @@ The Test Of The Force is a fun interactive front-end web application presented i
 Have fun you shall, little Padawan.....
 
 ## Goal
-The goal of this project is to give the chance to Star Wars fans to test their knowledge in Star Wars trivis.
-The greatest portion of the users is expected to be Star Wars fans.
+
 We strive for our users to have fun and challenge their Star Wars trivia.
+=======
+
+    - To encourage people to take our Star Wars quiz.
+    - To let users select different levels of difficulty.
+    - To provide users with feedback so that they know what they have gotten wrong and to learn the correct answer.
+    Anybody interested in having fun and having a quiz about the Star Wars franchise.
+
 
 ## Design
 ### Colors
 The primary color palette for the app is shown below.
 
-![mobile phone wireframe of website](static/images/color-palette.png)
+![mobile phone wireframe of the website](static/images/color-palette.png)
 
 ### Imagery
 
@@ -54,6 +61,7 @@ Wireframes for a responsive design have been created. The homepage design is sho
 #### Key information for the site
 
 This section provides insight into the UX process, focusing on who this quiz is for, the main aims of the project and how the website can help users meet their needs.
+
 
 Project goals:
 - To encourage people to take our Star Wars quiz.
@@ -105,6 +113,7 @@ Project goals:
 - This page contains the teams names as well as links to their linkedIn and Github prfiles.
 
 ![Levels](features/feature17.jpg)
+
 
 ### User Stories
 
