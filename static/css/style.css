@@ -521,8 +521,7 @@ label, #return-home {
   transition: background-color 0.3s ease-in-out;
 }
 
-label::after,
-#return-home {
+label::after {
   content: '';
   z-index: -1;
   background-color: #ffffff33;
@@ -534,6 +533,19 @@ label::after,
   height: 200%;
   transform: translateX(-100%) rotate(35deg);
   transition: transform 1s ease-in-out;
+}
+
+#return-home {
+  content: '';
+  z-index: -1;
+  background-color: #ffffff33;
+  position: absolute;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
 }
 
 label:hover,
