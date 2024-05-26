@@ -17,6 +17,10 @@ let answersCorrect = 0;
 let timer;
 const TIMER_DURATION = 10;
 
+// Get the modal
+let modal = document.getElementById('answerModal');
+let modalMessage = document.getElementById('modal-message');
+
 // Declare the shuffled game data iterator
 let shuffledGameDataIterator;
 
@@ -103,15 +107,48 @@ function triviaGameEasy() {
             // Display the first question
             displayNextQuestion();
 
+            // Get the sound-control element
+            let soundControl = document.getElementById('sound-control');
+
+            // Insert HTML into the sound-control element
+            soundControl.innerHTML = `
+                <i class="fa-solid fa-volume-high icon-white sound-on"></i>
+                <i class="fa-solid fa-volume-xmark icon-white sound-off"></i>
+            `;
+
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
             themeAudio.play();
-            
+
+            // Store the interval ID
+            let intervalId;
+
             // Play the audio every 26 seconds
-            setInterval(function() {
+            intervalId = setInterval(function() {
                 themeAudio.currentTime = 0;
                 themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
+
+            // Get the sound-off and sound-on buttons
+            let soundOffButton = document.querySelector('.sound-off');
+            let soundOnButton = document.querySelector('.sound-on');
+
+            // Add event listener to the sound-off button
+            soundOffButton.addEventListener('click', function() {
+                // Pause the audio and clear the interval
+                themeAudio.pause();
+                clearInterval(intervalId);
+            });
+
+            // Add event listener to the sound-on button
+            soundOnButton.addEventListener('click', function() {
+                // Play the audio and set the interval
+                themeAudio.play();
+                intervalId = setInterval(function() {
+                    themeAudio.currentTime = 0;
+                    themeAudio.play();
+                }, 26000);
+            });
             
         })
         // Handle any errors
@@ -151,15 +188,48 @@ function triviaGameMedium() {
             // Display the first question
             displayNextQuestion();
 
+            // Get the sound-control element
+            let soundControl = document.getElementById('sound-control');
+
+            // Insert HTML into the sound-control element
+            soundControl.innerHTML = `
+                <i class="fa-solid fa-volume-high icon-white sound-on"></i>
+                <i class="fa-solid fa-volume-xmark icon-white sound-off"></i>
+            `;
+
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
             themeAudio.play();
-            
+
+            // Store the interval ID
+            let intervalId;
+
             // Play the audio every 26 seconds
-            setInterval(function() {
+            intervalId = setInterval(function() {
                 themeAudio.currentTime = 0;
                 themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
+
+            // Get the sound-off and sound-on buttons
+            let soundOffButton = document.querySelector('.sound-off');
+            let soundOnButton = document.querySelector('.sound-on');
+
+            // Add event listener to the sound-off button
+            soundOffButton.addEventListener('click', function() {
+                // Pause the audio and clear the interval
+                themeAudio.pause();
+                clearInterval(intervalId);
+            });
+
+            // Add event listener to the sound-on button
+            soundOnButton.addEventListener('click', function() {
+                // Play the audio and set the interval
+                themeAudio.play();
+                intervalId = setInterval(function() {
+                    themeAudio.currentTime = 0;
+                    themeAudio.play();
+                }, 26000);
+            });
             
         })
         // Handle any errors
@@ -199,15 +269,48 @@ function triviaGameHard() {
             // Display the first question
             displayNextQuestion();
 
+            // Get the sound-control element
+            let soundControl = document.getElementById('sound-control');
+
+            // Insert HTML into the sound-control element
+            soundControl.innerHTML = `
+                <i class="fa-solid fa-volume-high icon-white sound-on"></i>
+                <i class="fa-solid fa-volume-xmark icon-white sound-off"></i>
+            `;
+
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
             themeAudio.play();
-            
+
+            // Store the interval ID
+            let intervalId;
+
             // Play the audio every 26 seconds
-            setInterval(function() {
+            intervalId = setInterval(function() {
                 themeAudio.currentTime = 0;
                 themeAudio.play();
             }, 26000); // 26000 milliseconds = 26 seconds
+
+            // Get the sound-off and sound-on buttons
+            let soundOffButton = document.querySelector('.sound-off');
+            let soundOnButton = document.querySelector('.sound-on');
+
+            // Add event listener to the sound-off button
+            soundOffButton.addEventListener('click', function() {
+                // Pause the audio and clear the interval
+                themeAudio.pause();
+                clearInterval(intervalId);
+            });
+
+            // Add event listener to the sound-on button
+            soundOnButton.addEventListener('click', function() {
+                // Play the audio and set the interval
+                themeAudio.play();
+                intervalId = setInterval(function() {
+                    themeAudio.currentTime = 0;
+                    themeAudio.play();
+                }, 26000);
+            });
             
         })
         // Handle any errors
@@ -238,8 +341,22 @@ function shuffleArray(array) {
     return array;
 }
 
+let questionCounter = 0;
+
 // Display the next question
 function displayNextQuestion() {
+    
+    // Increment the question counter
+    questionCounter++;
+
+    if (questionCounter === 5) {
+        // Get the next-question-modal-button button
+        let nextQuestionModalButton = document.getElementById('next-question-modal-button');
+
+        // Change the text of the button
+        nextQuestionModalButton.textContent = "See your results";
+    }
+
     startTimer();
 
     // Get the next item from the shuffled game data iterator
@@ -250,6 +367,7 @@ function displayNextQuestion() {
 
     // If there are no more questions, display a message
     if (nextItem.done) {
+        
         stopTimer();
         themeAudio.pause();
         themeAudio.currentTime = 0;
@@ -277,13 +395,13 @@ function displayNextQuestion() {
                                   </button>
                               </div>`;
     
-                              let returnHome = document.getElementById('return-home');
-                              returnHome.addEventListener('click', function() {
-                                  audio = new Audio('./static/sounds/roger-roger-sound.mp3');
-                                  audio.play();
-                                  setTimeout(function() {
-                                      window.location.href = 'index.html';
-                                  }, 1900);
+        let returnHome = document.getElementById('return-home');
+        returnHome.addEventListener('click', function() {
+            audio = new Audio('./static/sounds/roger-roger-sound.mp3');
+            audio.play();
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1900);
         });
     
         return;
@@ -313,10 +431,6 @@ function generateQuestionHTML(nextItem, shuffledAnswers) {
     // Return the generated HTML
     return html;
 }
-
-// Get the modal
-let modal = document.getElementById('answerModal');
-let modalMessage = document.getElementById('modal-message');
 
 // Attach event listeners to the possible answers
 function attachAnswerListeners(shuffledAnswers, nextItem) {
