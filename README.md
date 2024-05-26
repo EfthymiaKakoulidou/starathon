@@ -72,34 +72,34 @@ Project goals:
 #### The Game area
 - The main part of the Home page is occupied by the game area. Before the game starts the user is called to choose the level of difficulty he wants to play with. The user has 3 choices : Younling, Padawan and Grand Master. When the user hovers over these choices he/she gets to see which level of difficulty they represent. When he chooses a category a sound clip is heard saying "I like those odds".
 
-|  |  |  |  | 
+| Levels | Easy | Intermediate | Hard | 
 | ------------- | ------------- | ------------- | ------------- | 
-| ![Levels](features/feature02.jpg) | ![Levels](features/feature03.jpg) | ![Levels](features/feature04.jpg) | ![Levels](features/feature05.jpg) | 
+| ![Levels](features/feature02.jpg) | ![Easy](features/feature03.jpg) | ![Intermediate](features/feature04.jpg) | ![Hard](features/feature05.jpg) | 
 
 #### The Questions
 - After the user makes his choice, the background music starts to play, the timer starts, and the first question of the level chosen appears. Below the question are the possible answers. Only one of them is right. Depending on whether the user answered right or wrong or if they did not manage to answer in time they get the appropriate message.
 
-|  |  |  |  |  
+| Answers | Correct | Incorrect | Notime |  
 | ------------- | ------------- | ------------- | ------------- |
-| ![Levels](features/feature06.jpg) | ![Levels](features/feature07.jpg) | ![Levels](features/feature08.jpg) | ![Levels](features/feature09.jpg) |
+| ![Answers](features/feature06.jpg) | ![Correct](features/feature07.jpg) | ![Incorrect](features/feature08.jpg) | ![Notime](features/feature09.jpg) |
 
 | The timer | The music |
 | ------------- | ------------- | 
-| ![Levels](features/feature10.jpg) | ![Levels](features/feature11.jpg) ![Levels](features/feature12.jpg) |
+| ![Timer](features/feature10.jpg) | ![Music](features/feature11.jpg) ![Music](features/feature12.jpg) |
 
 #### The Results Page
 - Once the user answers all the 5 questions he/she gets to results page. There he can see how many out of 5 questions he/she has answered right. The user gets a different page according to how he/she did on the game and also a different sound clip.
 
-|  |  | 
+| Less than 3 | More than 3 | 
 | ------------- | ------------- | 
-| ![Levels](features/feature13.jpg) | ![Levels](features/feature14.jpg) | 
+| ![Less than 3](features/feature13.jpg) | ![More than 3](features/feature14.jpg) | 
 
 #### The Jedi and Sith Page
 - The Jedi and Sith page contain information about Star Wars and the basic characters characters of the movies.
 
 |  |  | 
 | ------------- | ------------- | 
-| ![Levels](features/feature15.jpg) | ![Levels](features/feature16.jpg) | 
+| ![Jedi](features/feature15.jpg) | ![Sith](features/feature16.jpg) | 
 
 #### The About Us Page
 - This page contains the teams names as well as links to their linkedIn and Github prfiles.
