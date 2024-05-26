@@ -483,6 +483,7 @@ function displayNextQuestion() {
         } else if (answersCorrect === 5) {
             audio = new Audio('./static/sounds/thats-how-its-done-star-wars.mp3');
             audio.play(); 
+            imageSrc = './static/images/great.jpg';
         } else {
             audio = new Audio('./static/sounds/arogent-and-i-apolgize.mp3');
             audio.play();
