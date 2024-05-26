@@ -78,6 +78,9 @@ function triviaGameEasy() {
     audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
 
+    // Disable the startGameEasy button
+    startGameEasy.disabled = true;
+
     setTimeout(function() {
         // Fetch the game data
         fetch('./static/js/game_data/game_data_easy.json')
@@ -123,6 +126,9 @@ function triviaGameMedium() {
     audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
 
+    // Disable the startGameMedium button
+    startGameMedium.disabled = true;
+
     setTimeout(function() {
         // Fetch the game data
         fetch('./static/js/game_data/game_data_medium.json')
@@ -167,6 +173,9 @@ function triviaGameHard() {
     // "I like those odds audio"
     audio = new Audio('./static/sounds/the-mandalorian.mp3');
     audio.play();
+
+    // Disable the startGameHard button
+    startGameHard.disabled = true;
 
     setTimeout(function() {
         // Fetch the game data
