@@ -118,7 +118,6 @@ function triviaGameEasy() {
 
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
-            themeAudio.play();
 
             // Store the interval ID
             let intervalId;
@@ -133,10 +132,35 @@ function triviaGameEasy() {
             let soundOffButton = document.querySelector('.sound-off');
             let soundOnButton = document.querySelector('.sound-on');
 
+            // Hide the sound-off element initially
+            soundOffButton.style.display = 'none';
+
+            // Add event listener for the play event
+            themeAudio.addEventListener('play', function() {
+                // Hide the sound-on element and show the sound-off element
+                soundOnButton.style.display = 'none';
+                soundOffButton.style.display = 'block';
+            });
+
+            // Add event listener for the pause event
+            themeAudio.addEventListener('pause', function() {
+                // Hide the sound-off element and show the sound-on element
+                soundOffButton.style.display = 'none';
+                soundOnButton.style.display = 'block';
+            });
+
+            // Play the audio
+            themeAudio.play();
+
             // Add event listener to the sound-off button
             soundOffButton.addEventListener('click', function() {
                 // Pause the audio and clear the interval
                 themeAudio.pause();
+
+                //TESTING
+                soundOffButton.style.display = 'none';
+                soundOnButton.style.display = 'block';
+
                 clearInterval(intervalId);
             });
 
@@ -144,9 +168,20 @@ function triviaGameEasy() {
             soundOnButton.addEventListener('click', function() {
                 // Play the audio and set the interval
                 themeAudio.play();
+
+
+                //TESTING
+
+                soundOnButton.style.display = 'none';
+                soundOffButton.style.display = 'block';
+
                 intervalId = setInterval(function() {
                     themeAudio.currentTime = 0;
                     themeAudio.play();
+                    //TESTING
+
+                    soundOnButton.style.display = 'none';
+                    soundOffButton.style.display = 'block';
                 }, 26000);
             });
             
@@ -199,7 +234,6 @@ function triviaGameMedium() {
 
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
-            themeAudio.play();
 
             // Store the interval ID
             let intervalId;
@@ -208,16 +242,48 @@ function triviaGameMedium() {
             intervalId = setInterval(function() {
                 themeAudio.currentTime = 0;
                 themeAudio.play();
+                //TESTING
+
+                soundOnButton.style.display = 'none';
+                soundOffButton.style.display = 'block';
             }, 26000); // 26000 milliseconds = 26 seconds
 
             // Get the sound-off and sound-on buttons
             let soundOffButton = document.querySelector('.sound-off');
             let soundOnButton = document.querySelector('.sound-on');
 
+            // Hide the sound-off element initially
+            soundOffButton.style.display = 'none';
+
+            // Add event listener for the play event
+            themeAudio.addEventListener('play', function() {
+                // Hide the sound-on element and show the sound-off element
+                soundOnButton.style.display = 'none';
+                soundOffButton.style.display = 'block';
+            });
+
+            // Add event listener for the pause event
+            themeAudio.addEventListener('pause', function() {
+                // Hide the sound-off element and show the sound-on element
+                soundOffButton.style.display = 'none';
+                soundOnButton.style.display = 'block';
+            });
+
+            // Play the audio
+            themeAudio.play();
+
+            //TESTING
+
+            soundOnButton.style.display = 'none';
+            soundOffButton.style.display = 'block';
+
             // Add event listener to the sound-off button
             soundOffButton.addEventListener('click', function() {
                 // Pause the audio and clear the interval
                 themeAudio.pause();
+                //TESTING
+                soundOffButton.style.display = 'none';
+                soundOnButton.style.display = 'block';
                 clearInterval(intervalId);
             });
 
@@ -228,6 +294,10 @@ function triviaGameMedium() {
                 intervalId = setInterval(function() {
                     themeAudio.currentTime = 0;
                     themeAudio.play();
+                    //TESTING
+
+                    soundOnButton.style.display = 'none';
+                    soundOffButton.style.display = 'block';
                 }, 26000);
             });
             
@@ -280,7 +350,6 @@ function triviaGameHard() {
 
             // Create a new Audio object
             themeAudio = new Audio('./static/sounds/cantina-band.mp3');
-            themeAudio.play();
 
             // Store the interval ID
             let intervalId;
@@ -289,16 +358,43 @@ function triviaGameHard() {
             intervalId = setInterval(function() {
                 themeAudio.currentTime = 0;
                 themeAudio.play();
+                //TESTING
+
+                soundOnButton.style.display = 'none';
+                soundOffButton.style.display = 'block';
             }, 26000); // 26000 milliseconds = 26 seconds
 
             // Get the sound-off and sound-on buttons
             let soundOffButton = document.querySelector('.sound-off');
             let soundOnButton = document.querySelector('.sound-on');
 
+            // Hide the sound-off element initially
+            soundOffButton.style.display = 'none';
+
+            // Add event listener for the play event
+            themeAudio.addEventListener('play', function() {
+                // Hide the sound-on element and show the sound-off element
+                soundOnButton.style.display = 'none';
+                soundOffButton.style.display = 'block';
+            });
+
+            // Add event listener for the pause event
+            themeAudio.addEventListener('pause', function() {
+                // Hide the sound-off element and show the sound-on element
+                soundOffButton.style.display = 'none';
+                soundOnButton.style.display = 'block';
+            });
+
+            // Play the audio
+            themeAudio.play();
+
             // Add event listener to the sound-off button
             soundOffButton.addEventListener('click', function() {
                 // Pause the audio and clear the interval
                 themeAudio.pause();
+                //TESTING
+                soundOffButton.style.display = 'none';
+                soundOnButton.style.display = 'block';
                 clearInterval(intervalId);
             });
 
@@ -309,6 +405,10 @@ function triviaGameHard() {
                 intervalId = setInterval(function() {
                     themeAudio.currentTime = 0;
                     themeAudio.play();
+                    //TESTING
+
+                    soundOnButton.style.display = 'none';
+                    soundOffButton.style.display = 'block';
                 }, 26000);
             });
             
@@ -370,19 +470,23 @@ function displayNextQuestion() {
         
         stopTimer();
         themeAudio.pause();
+        
         themeAudio.currentTime = 0;
     
         let message;
         let imageSrc;
     
-        if (answersCorrect >= 3) {
+        if (answersCorrect >= 3 && answersCorrect != 5) {
             audio = new Audio('./static/sounds/vader-force-strong.mp3');
             audio.play();
             imageSrc = './static/images/success.jpg'; 
+        } else if (answersCorrect === 5) {
+            audio = new Audio('./static/sounds/thats-how-its-done-star-wars.mp3');
+            audio.play(); 
         } else {
-            audio = new Audio('');
+            audio = new Audio('./static/sounds/arogent-and-i-apolgize.mp3');
             audio.play();
-            imageSrc = './static/images/failure.png'; 
+            imageSrc = './static/images/failure.png';
         }
     
         document.getElementById('timer').textContent = null;
