@@ -17,6 +17,10 @@ let answersCorrect = 0;
 let timer;
 const TIMER_DURATION = 10;
 
+// Get the modal
+let modal = document.getElementById('answerModal');
+let modalMessage = document.getElementById('modal-message');
+
 // Declare the shuffled game data iterator
 let shuffledGameDataIterator;
 
@@ -337,8 +341,22 @@ function shuffleArray(array) {
     return array;
 }
 
+let questionCounter = 0;
+
 // Display the next question
 function displayNextQuestion() {
+    
+    // Increment the question counter
+    questionCounter++;
+
+    if (questionCounter === 5) {
+        // Get the next-question-modal-button button
+        let nextQuestionModalButton = document.getElementById('next-question-modal-button');
+
+        // Change the text of the button
+        nextQuestionModalButton.textContent = "See your results";
+    }
+
     startTimer();
 
     // Get the next item from the shuffled game data iterator
@@ -349,6 +367,7 @@ function displayNextQuestion() {
 
     // If there are no more questions, display a message
     if (nextItem.done) {
+        
         stopTimer();
         themeAudio.pause();
         themeAudio.currentTime = 0;
@@ -376,13 +395,13 @@ function displayNextQuestion() {
                                   </button>
                               </div>`;
     
-                              let returnHome = document.getElementById('return-home');
-                              returnHome.addEventListener('click', function() {
-                                  audio = new Audio('./static/sounds/roger-roger-sound.mp3');
-                                  audio.play();
-                                  setTimeout(function() {
-                                      window.location.href = 'index.html';
-                                  }, 1900);
+        let returnHome = document.getElementById('return-home');
+        returnHome.addEventListener('click', function() {
+            audio = new Audio('./static/sounds/roger-roger-sound.mp3');
+            audio.play();
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1900);
         });
     
         return;
@@ -412,10 +431,6 @@ function generateQuestionHTML(nextItem, shuffledAnswers) {
     // Return the generated HTML
     return html;
 }
-
-// Get the modal
-let modal = document.getElementById('answerModal');
-let modalMessage = document.getElementById('modal-message');
 
 // Attach event listeners to the possible answers
 function attachAnswerListeners(shuffledAnswers, nextItem) {
