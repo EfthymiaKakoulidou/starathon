@@ -98,9 +98,9 @@ Project goals:
 #### The Results Page
 - Once the user answers all the 5 questions he/she gets to results page. There he can see how many out of 5 questions he/she has answered right. The user gets a different page according to how he/she did on the game and also a different sound clip.
 
-| Less than 3 | More than 3 | 
+| Less than 3 | More than 3 | 5 out of 5 | 
 | ------------- | ------------- | 
-| ![Less than 3](features/feature13.jpg) | ![More than 3](features/feature14.jpg) | 
+| ![Less than 3](features/feature13.jpg) | ![More than 3](features/feature14.jpg) | ![5 right](features/feature18.jpg) |
 
 #### The Jedi and Sith Page
 - The Jedi and Sith page contain information about Star Wars and the basic characters characters of the movies.
