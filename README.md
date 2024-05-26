@@ -27,12 +27,9 @@ The Test Of The Force is a fun interactive front-end web application presented i
 Have fun you shall, little Padawan.....
 
 ## Goal
-The goal section provides a concise summary of the main objective or purpose of the project or software described in this README. It addresses the following aspects:
-
-- ➡️ Problem Statement
-- ➡️ Objective(s)
-- ➡️ Target Audience
-- ➡️ Benefits
+The goal of this project is to give the chance to Star Wars fans to test their knowledge in Star Wars trivis.
+The greatest portion of the users is expected to be Star Wars fans.
+We strive for our users to have fun and challenge their Star Wars trivia.
 
 ## Design
 ### Colors
@@ -62,6 +59,52 @@ Project goals:
 - To encourage people to take our Star Wars quiz.
 - To let users select different levels of difficulty.
 - To provide users with feedback so that they know what they have gotten wrong and to learn the correct answer.
+
+## Features
+
+#### Navigation
+- The navigation bar is located at the top of each page on the site and is represented with a burger icon. 
+- The menu contains links to the Home page, the Jedi page, the Sith Page, and the About us page.
+- The Star wars logo on the top left of every page functions also as a link to the home-page.
+
+![Navigation](features/feature01.jpg)
+
+#### The Game area
+- The main part of the Home page is occupied by the game area. Before the game starts the user is called to choose the level of difficulty he wants to play with. The user has 3 choices : Younling, Padawan and Grand Master. When the user hovers over these choices he/she gets to see which level of difficulty they represent. When he chooses a category a sound clip is heard saying "I like those odds".
+
+|  |  |  |  | 
+| ------------- | ------------- | ------------- | ------------- | 
+| ![Levels](features/feature02.jpg) | ![Levels](features/feature03.jpg) | ![Levels](features/feature04.jpg) | ![Levels](features/feature05.jpg) | 
+
+#### The Questions
+- After the user makes his choice, the background music starts to play, the timer starts, and the first question of the level chosen appears. Below the question are the possible answers. Only one of them is right. Depending on whether the user answered right or wrong or if they did not manage to answer in time they get the appropriate message.
+
+|  |  |  |  |  
+| ------------- | ------------- | ------------- | ------------- |
+| ![Levels](features/feature06.jpg) | ![Levels](features/feature07.jpg) | ![Levels](features/feature08.jpg) | ![Levels](features/feature09.jpg) |
+
+| The timer | The music |
+| ------------- | ------------- | 
+| ![Levels](features/feature10.jpg) | ![Levels](features/feature11.jpg) ![Levels](features/feature12.jpg) |
+
+#### The Results Page
+- Once the user answers all the 5 questions he/she gets to results page. There he can see how many out of 5 questions he/she has answered right. The user gets a different page according to how he/she did on the game and also a different sound clip.
+
+|  |  | 
+| ------------- | ------------- | 
+| ![Levels](features/feature13.jpg) | ![Levels](features/feature14.jpg) | 
+
+#### The Jedi and Sith Page
+- The Jedi and Sith page contain information about Star Wars and the basic characters characters of the movies.
+
+|  |  | 
+| ------------- | ------------- | 
+| ![Levels](features/feature15.jpg) | ![Levels](features/feature16.jpg) | 
+
+#### The About Us Page
+- This page contains the teams names as well as links to their linkedIn and Github prfiles.
+
+![Levels](features/feature17.jpg)
 
 ### User Stories
 
