@@ -738,21 +738,27 @@ footer {
   text-align: center;
   justify-self: center;
   top: 30%;
-  padding: 3.9rem;
+  padding: auto;
   border: 1px solid #888888;
-  width: 40%;
+  width: 50%;
+  height: 50%;
   margin: 0 auto;
 }
 
 #modal-message {
-  background: #00000092;
+  background: #000000ec;
   padding: 10px;
   font-family: 'Days One', sans-serif;
   font-size: 1rem;
+  box-shadow: inset 0 0 7px 3px #ffffff;
+}
+
+#next-question-modal-button.game-start.modal-game-start {
+  top: 60%;
 }
 
 .modal-game-start {
-  background-color: #000000;
+    background-color: #000000;
 }
 
 /* ==== End of Modal styles ==== */
