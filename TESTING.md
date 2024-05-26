@@ -23,9 +23,14 @@ User stories were created to aid developing a test plan, the test plan includes 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
 #### CSS
+Some errors minor errors were found and tackled for css until the results showed no errors.<br>
+![css](docs/testing/css-errors.png)
+
+Fixed.<br>
 ![css](docs/testing/css.png)
 
 #### HTML
+All pages passed the html validator returning no issues
 ![html](docs/testing/html.png)
 
 ### WAVE
@@ -33,12 +38,13 @@ Each page was run through the Web Accessibility Evaluation Tool (WAVE).<br>
 Different shades of yellow where used until the colour contrast passed the validator, a grey box background was added so it could be better visible<br>
 ![wave](docs/testing/wave.png)
 
-### JavaScript Validator 
-[jshint](https://jshint.com/) was used to validate the JavaScript.
-
+### JavaScript Validator - Jshint
+[jshint](https://jshint.com/) was used to validate the JavaScript.<br>
+Minor errors returned regarding missing semicolons or unused functions.<br>
+![Jshint](docs/testing/jshint1.png)
+Those errors were tackled.<br>
 
 ### Lighthouse
-
 We used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 ![lighthouse](docs/testing/home-lighthouse.png)
 
@@ -78,7 +84,6 @@ Full testing was performed on the following devices:
   - OnePlus 7T 
 
 Each device tested the site using the following browsers:
-
 - Google Chrome
 - Safari
 - Firefox
@@ -93,12 +98,7 @@ Each device tested the site using the following browsers:
 `Home page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| How to play modal | The modal open and closes correctly| Click on how to play, click on close | The content is shown and hidden as expected | Pass |
-| Play | The play button directs the user to the game select page | Click on any difficulty level | The questions load correctly | Pass |
-
-`Game select page`
-| Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
+| Intro section | The intro section displays correctly| Click on home page and look at the instructions | The content is clear and concise and informs the user on what each difficulty mean | Pass |
 | Youngling -Easy Quiz | The easy button directs the user to the easy quiz, questions from this category, easy are loaded | Click on the easy button | The easy quiz page loads pulling easy questions | Pass |
 | Padawan - Medium Quiz | The medium button directs the user to the easy quiz, questions from this category, medium are loaded | Click on the medium button | The medium quiz page loads pulling medium questions | Pass |
 | Grand Master - Hard Quiz | The hard button directs the user to the hard quiz, questions from the category, hard are loaded correctly | Click on the hard button | The hard quiz page loads correctly | Pass |
@@ -107,14 +107,13 @@ Each device tested the site using the following browsers:
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Stopwatch | A stopwatch shows while the questions are being populated | Click on any question | The stopwatch shows while answering the questions | Pass |
-| Next Question button |Next question button is working when clicking on it and goes to the next one| Click on any question, answer it| The questions are moving to the next one | Pass |
+| Next Question button | Next question button is working when clicking on it and goes to the next one| Click on any question, answer it| The questions are moving to the next one | Pass |
 | Start sound\stop |A button should allow to turn on and off the audio | Click on turn on or off the audio button | The button should allow the user to have any of those choices| Pass |
 
 `End page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Back home | The back home button redirect to the main page| Play any game and reach the end page | The correct page is loaded when the go back button is clicked | Fail |
-
+| Back home | The back home button redirect to the main page| Play any game and reach the end page | The correct page is loaded when the go back button is clicked | Pass |
 
 `404 page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
