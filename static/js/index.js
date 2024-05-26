@@ -375,14 +375,17 @@ function displayNextQuestion() {
         let message;
         let imageSrc;
     
-        if (answersCorrect >= 3) {
+        if (answersCorrect >= 3 && answersCorrect != 5) {
             audio = new Audio('./static/sounds/vader-force-strong.mp3');
             audio.play();
             imageSrc = './static/images/success.jpg'; 
+        } else if (answersCorrect === 5) {
+            audio = new Audio('./static/sounds/thats-how-its-done-star-wars.mp3');
+            audio.play(); 
         } else {
-            audio = new Audio('');
+            audio = new Audio('./static/sounds/arogent-and-i-apolgize.mp3');
             audio.play();
-            imageSrc = './static/images/failure.png'; 
+            imageSrc = './static/images/failure.png';
         }
     
         document.getElementById('timer').textContent = null;
