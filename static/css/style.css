@@ -90,9 +90,8 @@ body {
 
 h1 {
   text-align: center;
-  background: #bfb1b121;
+  background: #000000;
   padding: 3px;
-  border: 1px solid #ffd700;
   border-radius: 5px;
 }
 
@@ -102,11 +101,10 @@ h2 {
 }
 
 .intro-text {
-  background: #bfb1b121;
+  background: #000000;
   color: #ffd700;
   font-size: 1.25rem;
   padding: 3px;
-  border: 1px solid #ffd700;
   border-radius: 5px;
   margin: 25px auto;
 }
@@ -267,7 +265,8 @@ header {
 nav {
     font-family: 'SF Distant Galaxy', sans-serif;
     color: #ffffff;
-    background: #111111a1;
+    background: #111111;
+    background-image: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
     position: absolute;
     right: 0;
     transform: translateX(100%);
@@ -286,7 +285,7 @@ nav.show {
     overflow: hidden;
     display: flex;
     width: 200px;
-    height: 385px;
+    height: 220px;
     max-width: 100%;
     max-height: 75%;
     top: 5.1rem;
@@ -439,10 +438,9 @@ nav ul li.yellow:hover {
 
 #game-area h2,
 .countdown {
-  background: #bfb1b121;
+  background: #000000;
   color: #ffd700;
   padding: 3px;
-  border: 1px solid #ffd700;
   border-radius: 5px;
 }
 
@@ -454,8 +452,7 @@ nav ul li.yellow:hover {
   margin: 0.5rem auto;
   background: #bfb1b121;
   color: #ffffff;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #ffd700;  border-radius: 5px;
   padding: 0.5rem;
   width: 12rem;
   height: 2.5rem;
@@ -599,9 +596,8 @@ label:hover::after,
 
 .about-title {
   font-family: "Days One", sans-serif;
-  background: rgba(191, 177, 177, 0.128);
+  background: rgb(0, 0, 0);
   padding: 3px;
-  border: 1px solid #ffd700;
   border-radius: 5px;
   color:#ffd700;
 }
@@ -654,11 +650,10 @@ footer {
 .error-message {
   text-align: center;
   font-family: 'days one', sans-serif;
-  background: #bfb1b121;
+  background: #000000;
   color: #ffd700;
   padding: 0.5rem 2rem;
   max-width: 300px;
-  border: 1px solid #ffd700;
   border-radius: 3px;
   font-size: 1rem;
   margin: 0 auto;
@@ -726,6 +721,8 @@ footer {
   position: fixed;
   z-index: 1;
   left: 0;
+  color: white;
+  border-radius: 5px;
   width: 50%;
   height: 100%;
 }
@@ -733,12 +730,25 @@ footer {
 .modal-content {
   display: flex;
   flex-direction: column;
+  background-image: url("../images/storm-trooper.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 280px;
+  overflow: hidden;
   text-align: center;
   justify-self: center;
-  top: 25%;
-  padding: 20px;
+  top: 30%;
+  padding: 3.9rem;
   border: 1px solid #888888;
-  width: 80%;
+  width: 40%;
+  margin: 0 auto;
+}
+
+#modal-message {
+  background: #00000092;
+  padding: 10px;
+  font-family: 'Days One', sans-serif;
+  font-size: 1rem;
 }
 
 .modal-game-start {
