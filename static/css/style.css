@@ -95,10 +95,10 @@ h2 {
 .intro-text {
   background: #000000;
   color: #ffd700;
-  font-size: 1.25rem;
+  font-size: 0.75em;
   padding: 3px;
   border-radius: 5px;
-  margin: 25px auto;
+  margin: 0 auto;
 }
 
 main {
@@ -277,7 +277,7 @@ nav.show {
     overflow: hidden;
     display: flex;
     width: 200px;
-    height: 220px;
+    height: 120px;
     max-width: 100%;
     max-height: 75%;
     top: 5.1rem;
@@ -405,9 +405,7 @@ nav ul li.yellow:hover {
     flex-direction: column;
     height: 100%;
     max-width: 24rem;
-    margin-top: 5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .welcome-img {
@@ -441,7 +439,7 @@ nav ul li.yellow:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0.5rem auto;
+  margin: 0 auto;
   background: #bfb1b121;
   color: #ffffff;
   border: 1px solid #ffd700;  border-radius: 5px;
@@ -561,7 +559,7 @@ label:hover::after,
   width: 80px;
   height: 80px;
   margin: 10px auto;
-  margin-bottom: 30px;
+  margin-bottom: 6rem;
   background-position: 50%;
   border: 2px solid #ffd700;
   border-radius: 50%;
@@ -618,6 +616,9 @@ label:hover::after,
 /* ================================================== */
 
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
   font-family: 'Days One', sans-serif;
   text-align: center;
@@ -627,7 +628,6 @@ footer {
   border-top: 1px solid #ffffff92;
   box-shadow: 0 0 5px 3px #ffffff92;
   z-index: 3;
-  overflow: hidden;
 }
 
 /* ==== End of Footer Styles ==== */
@@ -830,7 +830,7 @@ footer {
 
 #start-game-easy,
 #start-game-medium {
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
 }
 
 /* ==== End of Variables styles ==== */
