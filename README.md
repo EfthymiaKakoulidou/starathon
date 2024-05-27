@@ -158,6 +158,7 @@ In the credits section, we provide information about the sources used:
 - The "correct answer" image was sourced from [The Mandalorian - A Quora channel](https://themandalorian.quora.com/Why-doesn-t-Grogu-smile).
 - The "incorrect" answer image was sourced from [HYPEBEAST](https://hypebeast.com/2015/9/an-extensive-history-lesson-of-star-wars-lightsabers).
 - The "time-up" answer image was sourced from [Wilson Lim - Animator](https://nosliwl.artstation.com/projects/lxWVNY).
+- We made use of [CloudConvert](https://cloudconvert.com/avif-to-png) to conert image formats for this project.
 
 
 ## The Starathon Team and contributors
