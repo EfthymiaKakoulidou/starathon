@@ -85,7 +85,7 @@ h2 {
 .intro-text {
   background: #000000;
   color: #ffd700;
-  font-size: 0.75em;
+  font-size: 1em;
   padding: 3px;
   border-radius: 5px;
   margin: 0 auto;
@@ -267,7 +267,7 @@ nav.show {
     overflow: hidden;
     display: flex;
     width: 200px;
-    height: 120px;
+    height: max-content;
     max-width: 100%;
     max-height: 75%;
     top: 5.1rem;
@@ -762,9 +762,9 @@ footer {
 }
 
 .modal-content {
+  background-color: #bfb1b1 !important;
   display: flex;
   flex-direction: column;
-  background-image: url("../images/storm-trooper.png");
   background-position: center;
   background-repeat: no-repeat;
   max-width: 280px;
@@ -780,6 +780,7 @@ footer {
 }
 
 #modal-message {
+  margin-top: 1.5rem;
   background: #000000ec;
   padding: 10px;
   font-family: 'Days One', sans-serif;
