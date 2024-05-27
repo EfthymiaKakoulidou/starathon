@@ -539,6 +539,7 @@ label::after {
   text-decoration: none;
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 label:hover,
