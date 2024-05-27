@@ -1,8 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url('https://fonts.cdnfonts.com/css/days-one');
+@import url('https://fonts.cdnfonts.com/css/sf-distant-galaxy');
+
 /**
  *
  * Index
  *
- *  0.0 - Variables
  *  1.0 - General
  *  1.1 - Typography
  *  1.2 - Backgrounds
@@ -11,8 +14,6 @@
  *  4.0 - Footer
  *  5.0 - Pages
  *  5.1 - Home
- *  5.2 - Jedi
- *  5.3 - Sith
  *  5.4 - Quiz
  *  5.5 - About
  *  5.6 - Error (404)
@@ -26,19 +27,6 @@
  *  7.0 - Media Queries
 */
 
-/* Waiting on global styles here */
-
-/* --root color variables etc go here */
-
-/* ================================================== */
-/* #0.0 - Variables ================================= */
-/* ================================================== */
-
-
-@import url('https://fonts.cdnfonts.com/css/star-wars');
-@import url('https://fonts.cdnfonts.com/css/days-one');
-@import url('https://fonts.cdnfonts.com/css/sf-distant-galaxy');
-                
 /* ================================================== */
 /* #1.0 - General =================================== */
 /* ================================================== */
@@ -518,9 +506,7 @@ label::after {
 
 #return-home {
   content: '';
-  /*z-index: -1;*/
   background-color: #ffffff33;
-  position: absolute;
   justify-content: center;
 }
 
@@ -679,7 +665,10 @@ footer {
 }
 
 .baby-yoda-img {
-  margin: 4.5rem auto 0 auto;
+  margin-top: 4.5rem;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
   width: 22%;
   min-width: 80px;
   min-height: 80px;
@@ -697,7 +686,7 @@ footer {
 .error-message505 {
   text-align: center;
   font-family: 'days one', sans-serif;
-  background: #bfb1b121;
+  background: #000000;
   color: #ffd700;
   padding: 0.5rem 2rem;
   max-width: 50%;
@@ -716,12 +705,15 @@ footer {
   border: 2px solid #ffd700;
   border-radius: 5px;
   padding: 0.5rem 2rem;
-  margin: 2rem auto 0 auto;  
+  margin: 2rem auto 0 auto;
+  text-decoration: none;
 }
+
 .error-button505 a {
   text-decoration: none;
   color: #ffd700;
 }
+
 .error-button505 a:hover {
   background-color: #ffd700;
   color: black;
@@ -732,9 +724,8 @@ footer {
 
 .darth-vader-img {
   margin: 2.5rem auto 0 auto;
-  width: 14%;
-  min-width: 40px;
-  min-height: 80px;
+  min-width: 80px;
+  min-height: 120px;
   max-height: 200px;
 }
 
@@ -773,7 +764,6 @@ footer {
   text-align: center;
   justify-self: center;
   top: 30%;
-  padding: auto;
   border: 1px solid #888888;
   width: 50%;
   height: 50%;
@@ -852,7 +842,7 @@ footer {
 
 .error-img {
   margin: 0 auto;
-  height: 15 rem;
+  height: 15rem;
 }
 /* === End of Error 404 (320px) Media Query style === */
 
@@ -878,31 +868,6 @@ footer {
 
   /* ==== 505 error page === */
 
-  /* ====505 Error==== */
-
-.error-message505.p1{
-  font-size: 1.5rem;
-  padding: 10px 0;
-}
-
-.error-message505 {
-  max-width: 80%;
-  font-size: 0.8rem;
-}
-
-.error-button505 {
-  font-size: 1em;
-  padding: 0.5rem 1rem;
-  margin: 1rem auto 0 auto;  
-}
-
-.darth-vader-img {
-  margin: 2.5rem auto 0 auto;
-  width: 14%;
-  min-width: 40px;
-  min-height: 80px;
-  max-height: 200px;
-}
 
 }
 
@@ -922,15 +887,6 @@ footer {
 
 }
 
-
-.baby-yoda-img {
-  margin-top: 6.5rem auto 0 auto;
-  width: 22%;
-  min-width: 80px;
-  min-height: 80px;
-  max-height: 200px;
-  max-width: 200px;
-}
 
 /* === End of Error 404 (768px) Media Query style === */
 
