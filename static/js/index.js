@@ -491,22 +491,26 @@ function displayNextQuestion() {
     
         document.getElementById('timer').textContent = null;
         gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions}</h1>
-                              <h2>No more questions</h2>
                               <img src="${imageSrc}" alt="result image" class="result-image">
-                              <a href="index.html" class='button-container'>
-                                  <button onclick="redirectToHome() id="return-home" type="button" class="game-start" aria-label="button to return to home page">
-                                      Return to Home
+                              <div class='button-container'>
+                                  <button id="return-home" type="button" class="game-start" aria-label="button to return to home page">
+                                      Restart Quiz
                                   </button>
-                              </a>`;
+                              </div>`;
     
         let returnHome = document.getElementById('return-home');
         returnHome.addEventListener('click', function() {
             audio = new Audio('./static/sounds/roger-roger-sound.mp3');
             audio.play();
-            redirectToHome();
+            setTimeout(redirectToHome, 2000);
         });
     
         return;
+    }
+
+    function redirectToHome() {
+        // Change the current URL to the home page URL
+        window.location.href = '/starathon/index.html';
     }
 
     // Shuffle the answers and generate the HTML
