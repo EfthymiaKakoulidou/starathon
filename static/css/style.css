@@ -829,7 +829,11 @@ footer {
 .sound {
   /* display: none; */
   color: #ffffff;
-  margin: 0 0 0 25px;
+  position: absolute;
+  bottom: 90px;
+  left: 60px;
+  font-weight: 900;
+  font-size: 1.5em;
 }
 
 /* ================================================== */
