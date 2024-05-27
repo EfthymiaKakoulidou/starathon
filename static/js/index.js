@@ -473,7 +473,6 @@ function displayNextQuestion() {
         
         themeAudio.currentTime = 0;
     
-        let message;
         let imageSrc;
     
         if (answersCorrect >= 3 && answersCorrect != 5) {
@@ -548,9 +547,18 @@ function attachAnswerListeners(shuffledAnswers, nextItem) {
 
             // Display the modal with the result of the answer
             if (answer === nextItem.value.correctAnswer) {
+                // Get the element
+                let background = document.getElementById('modal-content');
+                // Change the background image
+                background.style.backgroundImage = "url('./static/images/grogu-happy.jpg')";
                 answersCorrect++;
+
                 modalMessage.textContent = 'Correct!';
             } else {
+                // Get the element
+                let background = document.getElementById('modal-content');
+                // Change the background image
+                background.style.backgroundImage = "url('./static/images/star-wars-lightsabers-x.png')";
                 modalMessage.textContent = 'Incorrect. The correct answer was ' + nextItem.value.correctAnswer;
             }
             modal.style.display = "block";
@@ -578,6 +586,10 @@ function startTimer() {
 
         if (timeLeft <= 0) {
             clearInterval(timer);
+            // Get the element
+            let background = document.getElementById('modal-content');
+            // Change the background image
+            background.style.backgroundImage = "url('./static/images/wilson-lim-1st-view-resize.jpg')";
             modalMessage.textContent = 'Time is up!';
             modal.style.display = "block";
         }
