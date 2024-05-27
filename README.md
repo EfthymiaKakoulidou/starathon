@@ -75,7 +75,7 @@ Project goals:
 - The menu contains links to the Home page, the Jedi page, the Sith Page, and the About us page.
 - The Star wars logo on the top left of every page functions also as a link to the home-page.
 
-![Navigation](features/feature01.jpg)
+![Navigation](features/feature01.png)
 
 #### The Game area
 - The main part of the Home page is occupied by the game area. Before the game starts the user is called to choose the level of difficulty he wants to play with. The user has 3 choices : Younling, Padawan and Grand Master. When the user hovers over these choices he/she gets to see which level of difficulty they represent. When he chooses a category a sound clip is heard saying "I like those odds".
@@ -89,7 +89,7 @@ Project goals:
 
 | Answers | Correct | Incorrect | Notime |  
 | ------------- | ------------- | ------------- | ------------- |
-| ![Answers](features/feature06.jpg) | ![Correct](features/feature07.jpg) | ![Incorrect](features/feature08.jpg) | ![Notime](features/feature09.jpg) |
+| ![Answers](features/feature06.jpg) | ![Correct](features/feature07.png) | ![Incorrect](features/feature08.png) | ![Notime](features/feature09.png) |
 
 | The timer | The music |
 | ------------- | ------------- | 
@@ -100,7 +100,7 @@ Project goals:
 
 | Less than 3 | More than 3 | 5 out of 5 | 
 | ------------- | ------------- | 
-| ![Less than 3](features/feature13.jpg) | ![More than 3](features/feature14.jpg) | ![5 right](features/feature18.jpg) |
+| ![Less than 3](features/feature13.png) | ![More than 3](features/feature14.png) | ![5 right](features/feature18.png) |
 
 #### The Jedi and Sith Page
 - The Jedi and Sith page contain information about Star Wars and the basic characters characters of the movies.
