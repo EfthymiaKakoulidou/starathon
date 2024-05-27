@@ -504,6 +504,12 @@ function displayNextQuestion() {
             audio.play();
             setTimeout(redirectToHome, 2000);
         });
+
+        returnHome.addEventListener('touchend', function() {
+            audio = new Audio('./static/sounds/roger-roger-sound.mp3');
+            audio.play();
+            setTimeout(redirectToHome, 2000);
+        });
     
         return;
     }
