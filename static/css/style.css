@@ -85,7 +85,7 @@ h2 {
 .intro-text {
   background: #000000;
   color: #ffd700;
-  font-size: 1em;
+  font-size: 0.75em;
   padding: 3px;
   border-radius: 5px;
   margin: 0 auto;
@@ -422,6 +422,7 @@ nav ul li.yellow:hover {
   color: #ffd700;
   padding: 3px;
   border-radius: 5px;
+  font-size: 1em;
 }
 
 .game-start {
@@ -546,10 +547,9 @@ label:hover::after,
   text-align: center;
   justify-content: center;
   font-size: 30px;
-  width: 80px;
-  height: 80px;
-  margin: 10px auto;
-  margin-bottom: 6rem;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 6rem auto;
   background-position: 50%;
   border: 2px solid #ffd700;
   border-radius: 50%;
@@ -611,6 +611,7 @@ footer {
   bottom: 0;
   width: 100%;
   font-family: 'Days One', sans-serif;
+  font-size: 0.75em;
   text-align: center;
   color: #ffffff;
   padding: 0.5rem 1rem;
@@ -827,13 +828,16 @@ footer {
 /* ==== End of Variables styles ==== */
 
 .sound {
-  /* display: none; */
   color: #ffffff;
   position: absolute;
-  bottom: 90px;
-  left: 60px;
-  font-weight: 900;
+  bottom: 3rem;
+  left: 2rem;
   font-size: 1.5em;
+}
+
+#sound-control {
+  position: absolute;
+  bottom: 18px;
 }
 
 /* ================================================== */
@@ -930,7 +934,6 @@ footer {
 
 /* === End of Error 404 (768px) Media Query style === */
 
-}
 
 @media screen and (min-width: 1024px) {
 
