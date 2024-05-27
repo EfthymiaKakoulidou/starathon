@@ -35,16 +35,6 @@
 /* ================================================== */
 
 
-:root {
-  -—primary-color: #ffff00;       /* Yellow */
-  -—secondary-color: #ffffff;      /*white*/
-  -—btn-background: #a6a6a637;     /*grey*/
-  -—accent-color-1: #000000;       /*black*/
-  -—accent-color-2: #00ff00;       /*green*/
-  -—accent-color-3: #ff0000;       /*red*/
-  -—accent-color-3: #ff00ff;      /*purple*/
-}
-
 @import url('https://fonts.cdnfonts.com/css/star-wars');
 @import url('https://fonts.cdnfonts.com/css/days-one');
 @import url('https://fonts.cdnfonts.com/css/sf-distant-galaxy');
