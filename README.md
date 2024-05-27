@@ -147,13 +147,17 @@ A number of family and friends were asked to review the app and this is what the
 - "I love the sarcasm in particular as i got many questions wrong, its really good. The design is spot on for star wars, simple and straightforward, it felt like it was designed by the franchise" - Tony Burton
 
 ## Credits
-In the credits section, we provide information about the sources used
-Fonts imported from [cdn fonts](https://www.cdnfonts.com).
-Image titles created at [flaming text](https://eu1.flamingtext.com).
-All sounds and sound effect sourced from [Myinstants Star Wars Sound Board](https://www.myinstants.com/en/search/?name=star%20wars).
-The background image used throughout is sourced from [freepik](https://www.freepik.com/free-photos-vectors/star-wars-background).
-The storm trooper modal image is sourced from [wallpapers.com](https://wallpapers.com/star-wars-background).
-The sound button icon is sourced from [font awesome](https://fontawesome.com/).
+In the credits section, we provide information about the sources used:
+
+- Fonts imported from [cdn fonts](https://www.cdnfonts.com).
+- Image titles created at [flaming text](https://eu1.flamingtext.com).
+- All sounds and sound effect sourced from [Myinstants Star Wars Sound Board](https://www.myinstants.com/en/search/?name=star%20wars).
+- The background image used throughout is sourced from [freepik](https://www.freepik.com/free-photos-vectors/star-wars-background).
+- The storm trooper modal image is sourced from [wallpapers.com](https://wallpapers.com/star-wars-background).
+- The sound button icon is sourced from [font awesome](https://fontawesome.com/).
+- The "correct answer" image was sourced from [The Mandalorian - A Quora channel](https://themandalorian.quora.com/Why-doesn-t-Grogu-smile).
+- The "incorrect" answer image was sourced from [HYPEBEAST](https://hypebeast.com/2015/9/an-extensive-history-lesson-of-star-wars-lightsabers).
+- The "time-up" answer image was sourced from [Wilson Lim - Animator](https://nosliwl.artstation.com/projects/lxWVNY).
 
 
 ## The Starathon Team and contributors
