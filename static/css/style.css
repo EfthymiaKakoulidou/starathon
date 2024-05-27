@@ -536,8 +536,10 @@ label::after {
 }
 
 .button-container {
+  text-decoration: none;
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 label:hover,
@@ -662,13 +664,6 @@ footer {
   font-size: 1rem;
   margin: 0 auto;
 }
-.p1{
-  font-size: 3rem;
-  color: #fff700;
-  /* background-image: linear-gradient(180deg, #ffd700, #bfb1b1); */
-  padding: 30px 0;
-}
-/* background-image: linear-gradient(0deg, red, yellow); */
 
 .error-button {
   text-align: center;
@@ -699,15 +694,60 @@ footer {
   min-height: 80px;
   max-height: 200px;
 }
+
+/* ====505 Error==== */
+
+.error-message505.p1{
+  font-size: 3rem;
+  color: #ffd700;
+  padding: 30px 0;
+}
+
+.error-message505 {
+  text-align: center;
+  font-family: 'days one', sans-serif;
+  background: #bfb1b121;
+  color: #ffd700;
+  padding: 0.5rem 2rem;
+  max-width: 50%;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+
+.error-button505 {
+  text-align: center;
+  font-family: 'SF Distant Galaxy', sans-serif;
+  font-size: 1.5em;
+  background: #bfb1b121;
+  color: #ffd700;
+  text-shadow: 0 0 1px white;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  margin: 2rem auto 0 auto;  
+}
+.error-button505 a {
+  text-decoration: none;
+  color: #ffd700;
+}
+.error-button505 a:hover {
+  background-color: #ffd700;
+  color: black;
+  text-shadow: 0 0 20px #f5f5f5;
+  border: 2px solid #f5f5f5;
+  box-shadow: 0 0 10px 3px #f5f5f5;
+}
+
 .darth-vader-img {
-  margin: 4.5rem auto 0 auto;
+  margin: 2.5rem auto 0 auto;
   width: 14%;
   min-width: 40px;
   min-height: 80px;
   max-height: 200px;
 }
 
-/* ==== End of Error 404 page styles ==== */
+/* ==== End of Error 404 and 505 page styles ==== */
 
 /* ================================================== */
 /* #6.1 - Modal ===================================== */
@@ -832,6 +872,38 @@ footer {
 }
 
 /* === End of Error 404 (425px) Media Query style === */
+
+}
+
+@media screen and (max-width: 600px) {
+
+  /* ==== 505 error page === */
+
+  /* ====505 Error==== */
+
+.error-message505.p1{
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.error-message505 {
+  max-width: 80%;
+  font-size: 0.8rem;
+}
+
+.error-button505 {
+  font-size: 1em;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto 0 auto;  
+}
+
+.darth-vader-img {
+  margin: 2.5rem auto 0 auto;
+  width: 14%;
+  min-width: 40px;
+  min-height: 80px;
+  max-height: 200px;
+}
 
 }
 
