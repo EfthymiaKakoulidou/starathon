@@ -517,7 +517,7 @@ label::after {
 
 #return-home {
   content: '';
-  z-index: -1;
+  /*z-index: -1;*/
   background-color: #ffffff33;
   position: absolute;
   justify-content: center;
