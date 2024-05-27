@@ -828,12 +828,16 @@ footer {
 /* ==== End of Variables styles ==== */
 
 .sound {
-  /* display: none; */
   color: #ffffff;
   position: absolute;
   bottom: 3rem;
   left: 2rem;
   font-size: 1.5em;
+}
+
+#sound-control {
+  position: absolute;
+  bottom: 18px;
 }
 
 /* ================================================== */
