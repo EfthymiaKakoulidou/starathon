@@ -113,7 +113,14 @@ Each device tested the site using the following browsers:
 `End page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| Results | The results show correctly| Play any game and reach the end page | The correct results obtained are populated | Pass |
 | Back home | The back home button redirect to the main page| Play any game and reach the end page | The correct page is loaded when the go back button is clicked | Pass |
+
+`About us`
+| Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Github links | The link redirects to the team member Github| Click on the link | The correct page is loaded when clicking on the link | Pass |
+| Linkedin links | The link redirects to the team member Linkedin| Click on the link | The correct page is loaded when clicking on the link | Pass |
 
 `404 page`
 | Feature | Expected Result | Testing Performed | Actual Result | Pass/Fail |

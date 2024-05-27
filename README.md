@@ -35,7 +35,7 @@ We strive for our users to have fun and challenge their Star Wars trivia.
     - To encourage people to take our Star Wars quiz.
     - To let users select different levels of difficulty.
     - To provide users with feedback so that they know what they have gotten wrong and to learn the correct answer.
-    Anybody interested in having fun and having a quiz about the Star Wars franchise.
+    - Anybody interested in having fun and having a quiz about the Star Wars franchise.
 
 
 ## Design
