@@ -898,11 +898,22 @@ footer {
 
 }
 
-@media screen and (min-width: 768px) {
+/* ================================================== */
+/* #7.X - Home Page 768px Media Query=========== */
+/* ================================================== */
 
-/* ================================================== */
-/* #7.X - Error 404 page 768px Media Query=========== */
-/* ================================================== */
+@media screen and (min-width: 768px) {
+.welcome-img {
+  margin: 30px auto;
+}
+
+.welcome-container {
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+}
+
 
 .baby-yoda-img {
   margin-top: 6.5rem auto 0 auto;
