@@ -84,6 +84,8 @@ function triviaGameEasy() {
 
     // Disable the startGameEasy button
     startGameEasy.disabled = true;
+    startGameMedium.disabled = true;
+    startGameHard.disabled = true;
 
     setTimeout(function() {
         // Fetch the game data
@@ -199,7 +201,9 @@ function triviaGameMedium() {
     audio.play();
 
     // Disable the startGameMedium button
+    startGameEasy.disabled = true;
     startGameMedium.disabled = true;
+    startGameHard.disabled = true;
 
     setTimeout(function() {
         // Fetch the game data
@@ -315,6 +319,8 @@ function triviaGameHard() {
     audio.play();
 
     // Disable the startGameHard button
+    startGameEasy.disabled = true;
+    startGameMedium.disabled = true;
     startGameHard.disabled = true;
 
     setTimeout(function() {
