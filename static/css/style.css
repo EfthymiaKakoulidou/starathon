@@ -536,6 +536,7 @@ label::after {
 }
 
 .button-container {
+  text-decoration: none;
   display: flex;
   justify-content: center;
 }

@@ -494,19 +494,17 @@ function displayNextQuestion() {
         gameArea.innerHTML = `<h1>You scored ${answersCorrect} out of ${amountOfQuestions}</h1>
                               <h2>No more questions</h2>
                               <img src="${imageSrc}" alt="result image" class="result-image">
-                              <div class='button-container'>
-                                  <button id="return-home" type="button" class="game-start" aria-label="button to return to home page">
+                              <a href="index.html" class='button-container'>
+                                  <button onclick="redirectToHome() id="return-home" type="button" class="game-start" aria-label="button to return to home page">
                                       Return to Home
                                   </button>
-                              </div>`;
+                              </a>`;
     
         let returnHome = document.getElementById('return-home');
         returnHome.addEventListener('click', function() {
             audio = new Audio('./static/sounds/roger-roger-sound.mp3');
             audio.play();
-            setTimeout(function() {
-                window.location.href = 'index.html';
-            }, 1900);
+            redirectToHome();
         });
     
         return;
