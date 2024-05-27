@@ -510,7 +510,7 @@ function displayNextQuestion() {
 
     function redirectToHome() {
         // Change the current URL to the home page URL
-        window.location.href = '/';
+        window.location.href = '/starathon/index.html';
     }
 
     // Shuffle the answers and generate the HTML
