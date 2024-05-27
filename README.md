@@ -114,6 +114,9 @@ Project goals:
 
 ![Levels](features/feature17.jpg)
 
+#### Sound Button
+- The sound button allows the user to turn the sound effects on and off throughout the game with one click.
+
 
 ### User Stories
 
@@ -144,7 +147,8 @@ Fonts imported from [cdn fonts](https://www.cdnfonts.com).
 Image titles created at [flaming text](https://eu1.flamingtext.com).
 All sounds and sound effect sourced from [Myinstants Star Wars Sound Board](https://www.myinstants.com/en/search/?name=star%20wars).
 The background image used throughout is sourced from [freepik](https://www.freepik.com/free-photos-vectors/star-wars-background).
-The storm trooper modal image was sourced from [wallpapers.com](https://wallpapers.com/star-wars-background).
+The storm trooper modal image is sourced from [wallpapers.com](https://wallpapers.com/star-wars-background).
+The sound button icon is sourced from [font awesome](https://fontawesome.com/).
 
 
 ## The Starathon Team and contributors
