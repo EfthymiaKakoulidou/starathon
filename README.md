@@ -141,6 +141,11 @@ The Test Of The Force team made use of vanilla HTML3, CSS5 and JavaScript to bri
 ## Testing
 Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
+### Family and Friends Testing
+A number of family and friends were asked to review the app and this is what they had to say.
+
+- "I love the sarcasm in particular as i got many questions wrong, its really good. The design is spot on for star wars, simple and straightforward, it felt like it was designed by the franchise" - Tony Burton
+
 ## Credits
 In the credits section, we provide information about the sources used
 Fonts imported from [cdn fonts](https://www.cdnfonts.com).
