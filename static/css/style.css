@@ -85,7 +85,7 @@ h2 {
 .intro-text {
   background: #000000;
   color: #ffd700;
-  font-size: 1em;
+  font-size: 0.75em;
   padding: 3px;
   border-radius: 5px;
   margin: 0 auto;
@@ -830,9 +830,8 @@ footer {
   /* display: none; */
   color: #ffffff;
   position: absolute;
-  bottom: 90px;
-  left: 60px;
-  font-weight: 900;
+  bottom: 3rem;
+  left: 2rem;
   font-size: 1.5em;
 }
 
@@ -930,7 +929,6 @@ footer {
 
 /* === End of Error 404 (768px) Media Query style === */
 
-}
 
 @media screen and (min-width: 1024px) {
 
